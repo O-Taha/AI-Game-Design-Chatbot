@@ -83,18 +83,91 @@ def build_faiss_index(mechanics_data, index_file='RAGIndex/mechdex.faiss'):
     return index, metadata
 
 
-def retrieve(query, index_file='RAGIndex/mechdex.faiss', top_k=5):
-    # Charger index et metadata
-    index = faiss.read_index(index_file)
-    with open(index_file + '.meta', 'rb') as f:
+def retrieve(query: str,
+            index_file: str = 'RAGIndex/mechdex.faiss',
+            top_k: int | None = 2) -> List[Tuple[dict, float]]:
+    """
+    Recherche les top_k voisins pour une query dans l'index FAISS.
+
+    - index_file : chemin vers l'index FAISS (ex: 'RAGIndex/mechdex.faiss')
+    - top_k : nombre de voisins à retourner. Si None -> retourne tous les vecteurs.
+
+    Retour :
+        list de tuples (metadata_item, score)
+    """
+    # charger index + meta
+    index_path = Path(index_file)
+    if not index_path.exists():
+        raise FileNotFoundError(f"Index file not found: {index_file}")
+
+    index = faiss.read_index(str(index_path))
+    with open(str(index_path) + '.meta', 'rb') as f:
         metadata = pickle.load(f)
-    
-    # Embedding de la query
-    query_vec = text_embedding(query).reshape(1, -1)
-    
-    # Recherche
-    D, I = index.search(query_vec, top_k)
+
+    # Debug prints (utile pour comprendre pourquoi top_k "ne marche pas")
+    print(f"[retrieve] index file: {index_file}")
+    print(f"[retrieve] index type: {type(index)}")
+    try:
+        print(f"[retrieve] index.ntotal = {index.ntotal}, index.d = {index.d}")
+    except Exception:
+        print("[retrieve] could not read index.ntotal/index.d (index type special)")
+
+    # calcul embedding de la query (assure numpy float32, vector shape)
+    q = text_embedding(query)  # retourne np.ndarray (float32)
+    if not isinstance(q, np.ndarray):
+        q = np.asarray(q, dtype='float32')
+    else:
+        q = q.astype('float32')
+
+    if q.ndim == 1:
+        query_vec = q.reshape(1, -1)
+    elif q.ndim == 2 and q.shape[0] == 1:
+        query_vec = q
+    else:
+        raise ValueError(f"Query embedding has unexpected shape {q.shape}")
+
+    print(f"[retrieve] query_vec.shape = {query_vec.shape}, dtype = {query_vec.dtype}")
+
+    # déterminer top_k effectif
+    if top_k is None:
+        # si metadata disponible, utiliser sa longueur
+        try:
+            top_k_effective = len(metadata)
+        except Exception:
+            top_k_effective = 100  # fallback
+    else:
+        top_k_effective = int(top_k)
+
+    # clamp top_k_effective <= index.ntotal (si lisible)
+    if hasattr(index, 'ntotal'):
+        if top_k_effective > index.ntotal:
+            print(f"[retrieve] requested top_k={top_k_effective} > index.ntotal={index.ntotal}, clamping")
+            top_k_effective = index.ntotal
+
+    print(f"[retrieve] using top_k = {top_k_effective}")
+
+    # Si index est un IVF-like, augmenter nprobe pour rechercher davantage de cellules
+    # (utile si tu as IndexIVFFlat ou IndexIVFPQ)
+    if isinstance(index, faiss.IndexIVF):
+        # safe set nprobe
+        nlist = index.nlist if hasattr(index, 'nlist') else None
+        nprobe = min(10, nlist) if nlist else 10
+        print(f"[retrieve] index is IVF, setting nprobe = {nprobe}")
+        index.nprobe = nprobe
+
+    # Effectuer la recherche (FAISS attend float32)
+    try:
+        D, I = index.search(query_vec, top_k_effective)
+    except AssertionError as ae:
+        # dimension mismatch -> raise user friendly message
+        raise RuntimeError(f"FAISS dimension mismatch or error during search: {ae}")
+
+    # I contient -1 pour voisins inexistants ; filtrer ceux-ci
     results = []
     for idx, score in zip(I[0], D[0]):
+        if idx == -1:
+            continue
         results.append((metadata[idx], float(score)))
+
+    print(f"[retrieve] returning {len(results)} results")
     return results

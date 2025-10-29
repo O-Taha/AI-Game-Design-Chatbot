@@ -4,10 +4,10 @@ from tqdm import tqdm
 import torch
 import numpy as np
 
-
-MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-model = AutoModel.from_pretrained(MODEL_NAME)
+MODEL_NAME = "bert-large-uncased"
+FINE_TUNED_MODEL = "fine_tuned_model"
+tokenizer = AutoTokenizer.from_pretrained(FINE_TUNED_MODEL)
+model = AutoModel.from_pretrained(FINE_TUNED_MODEL)
 
 def text_embedding(text: str, normalize: bool = True) -> np.ndarray:
     """

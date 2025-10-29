@@ -15,11 +15,11 @@ if __name__ == "__main__":
     else:
         print("[Info] No new commit, using existing index.\n")
     
-    query = "My platformer's levels are too boring"
+    query =  """I'm developping a sort of punch out clone where you're in first person view and can punch as well as dodge left or right, but i feel like the game isn't original enough"""
 
     try:
         # Tentative de recherche dans l'index existant
-        results = retrieve(query)
+        results = retrieve(query, top_k = 5)
 
     except Exception as e:
         # Si une erreur survient (ex: dimensions incompatibles, fichier manquant, etc.)
