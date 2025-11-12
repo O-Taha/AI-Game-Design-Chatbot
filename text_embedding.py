@@ -4,8 +4,8 @@ from tqdm import tqdm
 import torch
 import numpy as np
 
-MODEL_NAME = "bert-large-uncased"
-FINE_TUNED_MODEL = "fine_tuned_model"
+MODEL_NAME = "bert-base-uncased"
+FINE_TUNED_MODEL = "TrainedModels/qbert-dapt"
 tokenizer = AutoTokenizer.from_pretrained(FINE_TUNED_MODEL)
 model = AutoModel.from_pretrained(FINE_TUNED_MODEL)
 

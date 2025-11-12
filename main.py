@@ -7,7 +7,6 @@ from pathlib import Path
 
 if __name__ == "__main__":
     index_found = any(Path('.').rglob("mechdex.faiss"))
-    
     if is_new_commit() or not index_found:
         print("[Action] New commit detected or missing index, rebuilding FAISS index...\n")
         mechanics = load_mechanics('.')
@@ -43,10 +42,5 @@ if __name__ == "__main__":
         print(f"🧩 {mech['name']} ({mech['category']}) - Score: {score:.4f}")
         print(f"   → Solved Problems: {mech['solved_problems']}\n")
 
-
-
-
-# Todo :
-# finir d'implémenter pipline rag
-# tester similarité avec plusieurs prompts
-# finetuner bert si trop faible
+        #Ajouter un dictionnaire de définitions au query
+        #Reentrainer le modèle avec des définitions spécifiquement
