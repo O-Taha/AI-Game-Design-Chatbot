@@ -6,71 +6,91 @@ import os
 # Configuration de la langue
 wikipedia.set_lang("en")
 
-# Récupération du texte complet via l'API
-page = wikipedia.page("Glossary of video game terms")
-content = page.content
+# Pages à scraper
+pages = [
+    "Glossary of video game terms",
+    "List of video game genres"
+]
 
 # Dossier de sortie
-os.makedirs("DAPT/DAPT_Scraped_corpus", exist_ok=True)
+output_dir = "DAPT/DAPT_Scraped_corpus"
+os.makedirs(output_dir, exist_ok=True)
 
-# Nettoyage du texte : suppression des références [1], [2], etc.
-content = re.sub(r"\[\d+\]", "", content)
+def scrape_wiki_page(title):
+    """Scrape une page Wikipedia et renvoie une liste (term, definition)."""
+    try:
+        page = wikipedia.page(title)
+        content = page.content
+    except Exception as e:
+        print(f"⚠️ Erreur lors du scraping de {title}: {e}")
+        return []
 
-# Découpage en lignes
-lines = [l.strip() for l in content.split("\n") if l.strip()]
+    # Nettoyage basique
+    content = re.sub(r"\[\d+\]", "", content)
+    lines = [l.strip() for l in content.split("\n") if l.strip()]
 
-entries = []
-current_term = None
-current_def = []
+    entries = []
+    current_term = None
+    current_def = []
 
-for line in lines:
-    # Ignorer les titres de section (A, B, C, etc.)
-    if re.fullmatch(r"[A-Z]$", line):
-        continue
+    for line in lines:
+        # Ignorer les titres de section (A, B, C, etc.)
+        if re.fullmatch(r"[A-Z]$", line):
+            continue
 
-    # Si la ligne semble être un nouveau terme (souvent sans point et courte)
-    if (
-        len(line) < 80  # les termes sont courts
-        and not line.endswith(".")  # pas une phrase complète
-        and not line.startswith("See also")  # filtrer les liens divers
-        and not re.match(r"^[0-9•-]", line)  # éviter les listes numérotées
-    ):
-        # Sauvegarder le terme précédent s'il existe
-        if current_term and current_def:
-            entries.append({
-                "term": current_term.strip(),
-                "definition": " ".join(current_def).strip()
-            })
-            current_def = []
+        # Détection d’un nouveau terme
+        if (
+            len(line) < 80
+            and not line.endswith(".")
+            and not line.startswith("See also")
+            and not re.match(r"^[0-9•-]", line)
+        ):
+            # Sauvegarder le précédent
+            if current_term and current_def:
+                entries.append({
+                    "term": current_term.strip(),
+                    "definition": " ".join(current_def).strip()
+                })
+                current_def = []
+            current_term = line
+        else:
+            if current_term:
+                current_def.append(line)
 
-        current_term = line
+    # Dernière entrée
+    if current_term and current_def:
+        entries.append({
+            "term": current_term.strip(),
+            "definition": " ".join(current_def).strip()
+        })
 
-    else:
-        # Ligne appartenant à la définition en cours
-        if current_term:
-            current_def.append(line)
+    print(f"✅ {len(entries)} entrées extraites depuis « {title} »")
+    return entries
 
-# Dernière entrée
-if current_term and current_def:
-    entries.append({
-        "term": current_term.strip(),
-        "definition": " ".join(current_def).strip()
-    })
 
-# Nettoyage final : suppression des doublons et trimming
+# Fusion de toutes les pages
+all_entries = []
+for page_title in pages:
+    all_entries.extend(scrape_wiki_page(page_title))
+
+# Nettoyage final
 cleaned = []
 seen = set()
-for e in entries:
-    if e["term"] not in seen and len(e["definition"]) > 15:
-        seen.add(e["term"])
+for e in all_entries:
+    term = e["term"].strip()
+    if term not in seen and len(e["definition"]) > 15:
+        seen.add(term)
         cleaned.append(e)
 
 # Sauvegarde JSON et TXT
-with open("DAPT/DAPT_Scraped_corpus/wiki_videogame_corpus.json", "w", encoding="utf-8") as f:
+json_path = os.path.join(output_dir, "wiki_videogame_corpus.json")
+txt_path = os.path.join(output_dir, "wiki_videogame_corpus.txt")
+
+with open(json_path, "w", encoding="utf-8") as f:
     json.dump(cleaned, f, indent=2, ensure_ascii=False)
 
-with open("DAPT/DAPT_Scraped_corpus/wiki_videogame_corpus.txt", "w", encoding="utf-8") as f:
+with open(txt_path, "w", encoding="utf-8") as f:
     for e in cleaned:
         f.write(f"{e['term']}:\n    {e['definition']}\n\n")
 
-print(f"✅ {len(cleaned)} termes extraits et sauvegardés dans DAPT/DAPT_Scraped_corpus/")
+print(f"✅ Corpus fusionné : {len(cleaned)} termes sauvegardés dans {output_dir}/")

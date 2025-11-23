@@ -15,12 +15,12 @@ from tqdm.auto import tqdm
 import torch
 
 def train_dapt(
-    corpus_file="DAPT/DAPT_Scraped_corpus/videogame_corpus.txt",
+    corpus_file="DAPT/DAPT_Scraped_corpus/wiki_videogame_corpus.txt",
     base_model="bert-base-uncased",  # "bert-large-uncased" si bon GPU
     out_dir="TrainedModels/qbert-dapt",
-    epochs=3,
+    epochs=2,
     per_device_batch_size=4,
-    lr=3e-5,
+    lr=2e-5,
     max_seq_length=256
 ):
     print("📚 Chargement du tokenizer et du modèle...")

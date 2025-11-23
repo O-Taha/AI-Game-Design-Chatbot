@@ -3,6 +3,7 @@ from torch.utils.data import Dataset, DataLoader
 from transformers import BertTokenizer, BertForSequenceClassification
 from torch.optim import AdamW
 from text_embedding import MODEL_NAME
+from text_embedding import FINE_TUNED_MODEL
 from tqdm import tqdm
 import pandas as pd
 import os
@@ -30,7 +31,7 @@ class GameMechanicDataset(Dataset):
         return {key: val.squeeze(0) for key, val in inputs.items()}, label
 
 
-pre_trained_model = MODEL_NAME
+pre_trained_model = FINE_TUNED_MODEL
 def fine_tune_bert(dataset_path="query_mechanics_dataset.csv", model_name=pre_trained_model, epochs=2, batch_size=2, lr=2e-5):
     """
     Entraîne BERT à prédire si une paire (problème, mécanique) correspond.
