@@ -2,13 +2,66 @@ import faiss
 import numpy as np
 import pickle
 from tqdm import tqdm
-import os, fnmatch
+import os
 from pathlib import Path
 from typing import List, Tuple
+import hashlib
 
-from text_embedding import *
+from text_embedding import text_embedding, MODEL_NAME, FINE_TUNED_MODEL
 
+# --- gestion des dossiers ---
 os.makedirs('RAGIndex', exist_ok=True)
+
+def compute_model_signature(model_dir: str) -> str:
+    """
+    Calcule une signature (sha1) du contenu d'un dossier modèle pour détecter changements.
+    """
+    p = Path(model_dir)
+    if not p.exists():
+        return ""
+    sha = hashlib.sha1()
+    # parcourir tous les fichiers
+    for f in sorted([x for x in p.rglob("*") if x.is_file()]):
+        try:
+            # inclure nom relatif, taille, date modif
+            rel = str(f.relative_to(p)).encode()
+            sha.update(rel)
+            st = f.stat()
+            sha.update(str(st.st_size).encode())
+            sha.update(str(int(st.st_mtime)).encode())
+        except Exception:
+            continue
+    return sha.hexdigest()
+
+def write_model_signature(index_file: str, model_dir: str):
+    sig = compute_model_signature(model_dir)
+    try:
+        with open(index_file + ".modelsig", "w") as f:
+            f.write(sig)
+    except Exception as e:
+        print(f"[RAG_FAISS] Warning: could not write model signature: {e}")
+
+def read_model_signature(index_file: str) -> str:
+    try:
+        with open(index_file + ".modelsig", "r") as f:
+            return f.read().strip()
+    except FileNotFoundError:
+        return ""
+
+def needs_rebuild(index_file: str = 'RAGIndex/mechdex.faiss', model_dir: str = FINE_TUNED_MODEL) -> bool:
+    """
+    Vérifie s’il faut reconstruire l’index : index manquant ou modèle modifié.
+    """
+    idx = Path(index_file)
+    if not idx.exists():
+        return True
+    saved = read_model_signature(index_file)
+    current = compute_model_signature(model_dir)
+    if saved != current:
+        print(f"[RAG_FAISS] Model signature changed (old={saved}, new={current}) → rebuild needed")
+        return True
+    return False
+
 
 def build_faiss_index(mechanics_data, index_file='RAGIndex/mechdex.faiss'):
     """
@@ -80,6 +133,8 @@ def build_faiss_index(mechanics_data, index_file='RAGIndex/mechdex.faiss'):
     with open(index_file + '.meta', 'wb') as f:
         pickle.dump(metadata, f)
     
+    write_model_signature(index_file, FINE_TUNED_MODEL)
+
     return index, metadata
 
 

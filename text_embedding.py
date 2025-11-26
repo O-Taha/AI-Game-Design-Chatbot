@@ -3,12 +3,21 @@ from typing import Union
 from tqdm import tqdm
 import torch
 import numpy as np
+from pathlib import Path
 
 MODEL_NAME = "bert-base-uncased"
-FINE_TUNED_MODEL = "TrainedModels/qbert-dapt"
-tokenizer = AutoTokenizer.from_pretrained(FINE_TUNED_MODEL)
-model = AutoModel.from_pretrained(FINE_TUNED_MODEL)
+FINE_TUNED_MODEL = "TrainedModels/qbert-lora"
 
+# Charger tokenizer / model de façon robuste : si dossier introuvable -> fallback sur MODEL_NAME
+if Path(FINE_TUNED_MODEL).exists():
+    tokenizer = AutoTokenizer.from_pretrained(FINE_TUNED_MODEL)
+    model = AutoModel.from_pretrained(FINE_TUNED_MODEL)
+else:
+    # fallback
+    print(f"[text_embedding] Warning: model path {FINE_TUNED_MODEL} not found. Falling back to {MODEL_NAME}.")
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    model = AutoModel.from_pretrained(MODEL_NAME)
+    
 def text_embedding(text: str, normalize: bool = True) -> np.ndarray:
     """
     Génère un embedding pour un texte donné à partir du modèle HuggingFace chargé.
