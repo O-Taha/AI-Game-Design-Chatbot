@@ -1,4 +1,4 @@
-from transformers import AutoTokenizer, AutoModel
+from transformers import AutoTokenizer, AutoModel, BertTokenizer, BertForMaskedLM
 from typing import Union
 from tqdm import tqdm
 import torch
@@ -111,6 +111,38 @@ def cosine_similarity(a: Union[np.ndarray, str],
     return float(np.dot(a_unit, b_unit))
 
 
+def bert_predict_mask(text, model_path="TrainedModels/qbert-lora", top_k=10):
+    """
+    Predicte les top-k complétions pour un masque [MASK] dans une phrase donnée.
+    """
+
+    # Charger tokenizer + modèle
+    tokenizer = BertTokenizer.from_pretrained(model_path)
+    model = BertForMaskedLM.from_pretrained(model_path)
+
+    # Tokenisation
+    inputs = tokenizer(text, return_tensors="pt")
+
+    # Trouver l'index du masque
+    mask_token_index = (inputs["input_ids"] == tokenizer.mask_token_id).nonzero(as_tuple=True)[1]
+
+    # Forward
+    with torch.no_grad():
+        outputs = model(**inputs)
+
+    logits = outputs.logits
+
+    # Obtenir les scores du masque
+    mask_token_logits = logits[0, mask_token_index, :]
+
+    # Top-k
+    top_k_tokens = torch.topk(mask_token_logits, top_k, dim=1).indices[0].tolist()
+    tokens = [tokenizer.decode([token]).strip() for token in top_k_tokens]
+    print(text, tokens, "\n")
+    return tokens
+
+
+
 if __name__ == "__main__":
     x1_pt = text_embedding("My platformer's levels are too flat and the level design isn't interesting")
     x2_pt = text_embedding("A Charge Attack is a combat action where the player holds down an input button to build up power, then releases it to unleash a more powerful version of an attack. The design is defined by the trade-off between the time spent charging (a window of vulnerability) and the increased damage, area of effect, or special properties (like breaking a guard) of the resulting attack. Problems Solved One-note combat rhythm If all attacks are instantaneous button presses, combat can devolve into a repetitive, button-mashing rhythm. Charge attacks solve this by introducing a new timing element. They create a risk-reward cadence of finding a safe moment to charge and timing the release, adding a layer of deliberate pacing to the fight.")
@@ -132,6 +164,14 @@ if __name__ == "__main__":
     e2 = text_embedding("A Charge Attack is a combat action where the player holds down an input button to build up power, then releases it to unleash a more powerful version of an attack. The design is defined by the trade-off between the time spent charging (a window of vulnerability) and the increased damage, area of effect, or special properties (like breaking a guard) of the resulting attack. Problems Solved One-note combat rhythm If all attacks are instantaneous button presses, combat can devolve into a repetitive, button-mashing rhythm. Charge attacks solve this by introducing a new timing element. They create a risk-reward cadence of finding a safe moment to charge and timing the release, adding a layer of deliberate pacing to the fight.", normalize=True)
     sim = cosine_similarity(e1, e2)  # float entre -1 et 1
     print("sim low (embeddings) =", sim)
+
+    bert_predict_mask("In this platformer, the player can [MASK] walls.")
+    bert_predict_mask("A metroidvania usually features a large interconnected [MASK].")
+    bert_predict_mask("Hitstop is a short freeze when a [MASK] connects.")
+    bert_predict_mask("Punch Out is a [MASK] game where you fight against Mike Tyson", "bert-base-uncased")
+    bert_predict_mask("Punch Out is a [MASK] game where you fight against Mike Tyson")
+
+
 
 
 

@@ -27,7 +27,7 @@ if __name__ == "__main__":
         print("[Info] Existing index valid, using it.\n")
 
     # Exemple de query
-    query = """I'm developping a sort of punch out clone where you're in first person view and can punch as well as dodge left or right, but i feel like the game isn't original enough"""
+    query = "this refers to video game design" + """I'm developping a sort of punch out clone where you're in first person view and can punch as well as dodge left or right, but i feel like the game isn't original enough"""
 
     try:
         results = retrieve(query, index_file=index_file, top_k=5)
@@ -43,3 +43,7 @@ if __name__ == "__main__":
     for mech, score in results_sorted:
         print(f"🧩 {mech['name']} ({mech['category']}) - Score: {score:.4f}")
         print(f"   → Solved Problems: {mech['solved_problems']}\n")
+
+# Retester un entrainement classique avec max. 3 epochs pour voir si la loss est plus régulière
+# Si oui, le problème vient du LoRA, essayer d'augmenter la taille de sa couche
+# Tracer les loss
