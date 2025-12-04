@@ -76,8 +76,8 @@ def train_dapt(
     resume_checkpoint=None,
     epochs=3,
     per_device_batch_size=4,
-    lr=2e-5,
-    max_seq_length=256,
+    lr=5e-6,
+    max_seq_length=128,
 ):
     print("\n📚 Chargement du tokenizer et du modèle...")
 
@@ -123,7 +123,7 @@ def train_dapt(
         weight_decay=0.01,
         dataloader_pin_memory=False,
         remove_unused_columns=False,
-        gradient_accumulation_steps=1,
+        gradient_accumulation_steps=8,
         push_to_hub=False,
         load_best_model_at_end=False,
     )

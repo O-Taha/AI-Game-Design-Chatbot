@@ -32,9 +32,9 @@
   "rank_pattern": {},
   "revision": null,
   "target_modules": [
-    "dense",
     "value",
-    "query"
+    "query",
+    "dense"
   ],
   "target_parameters": null,
   "task_type": "TOKEN_CLS",

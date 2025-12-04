@@ -1,0 +1,578 @@
+python lora_train.py         --corpus DAPT/DAPT_Scraped_corpus/wiki_videogame_corpus_2.txt       --base_model TrainedModels/qbert-lora/checkpoint-1146      
+   --out_dir TrainedModels/qbert-lora         --epochs 10         --batch_size
+ 8
+[info] Device: cpu
+[info] Resuming from LoRA checkpoint directory: TrainedModels/qbert-lora/checkpoint-1146
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForMaskedLM: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[info] Loading adapter weights (safetensors)...
+[info] Adapter weights loaded (strict=False).
+[info] trainable params: 1191936 || all params: 110706234 || trainable%: 1.076666
+trainable params: 1,191,936 || all params: 110,706,234 || trainable%: 1.0767
+Generating train split: 15333 examples [00:00, 1029029.61 examples/s]
+Map: 100%|████████████████████| 15333/15333 [00:01<00:00, 10210.54 examples/s]
+[info] Starting training…
+  0%|                                               | 0/38340 [00:00<?, ?it/s]/home/taha/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 3.3981, 'grad_norm': 11.47802448272705, 'learning_rate': 9.974178403755869e-05, 'epoch': 0.03}
+{'loss': 2.608, 'grad_norm': 20.484418869018555, 'learning_rate': 9.948095983307252e-05, 'epoch': 0.05}                                                                                               
+{'loss': 2.6348, 'grad_norm': 20.557205200195312, 'learning_rate': 9.922013562858634e-05, 'epoch': 0.08}                                                                                              
+{'loss': 2.2913, 'grad_norm': 17.93016815185547, 'learning_rate': 9.895931142410017e-05, 'epoch': 0.1}                                                                                                
+{'loss': 2.5818, 'grad_norm': 34.51460266113281, 'learning_rate': 9.869848721961399e-05, 'epoch': 0.13}                                                                                               
+  1%|██                                                                                                                                                        | 500/38340 [21:01<26:00:21,  2.47s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.2779, 'grad_norm': 8.9754056930542, 'learning_rate': 9.843766301512782e-05, 'epoch': 0.16}                                                                                                 
+{'loss': 2.2843, 'grad_norm': 31.382173538208008, 'learning_rate': 9.817683881064164e-05, 'epoch': 0.18}                                                                                              
+{'loss': 1.9981, 'grad_norm': 15.171625137329102, 'learning_rate': 9.791601460615545e-05, 'epoch': 0.21}                                                                                              
+{'loss': 2.6238, 'grad_norm': 28.5686092376709, 'learning_rate': 9.765519040166928e-05, 'epoch': 0.23}                                                                                                
+{'loss': 2.3399, 'grad_norm': 0.0, 'learning_rate': 9.73943661971831e-05, 'epoch': 0.26}                                                                                                              
+  3%|███▉                                                                                                                                                     | 1000/38340 [41:39<25:19:51,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6899, 'grad_norm': 23.82666778564453, 'learning_rate': 9.713354199269693e-05, 'epoch': 0.29}                                                                                               
+{'loss': 1.8458, 'grad_norm': 0.0, 'learning_rate': 9.687271778821075e-05, 'epoch': 0.31}                                                                                                             
+{'loss': 2.1917, 'grad_norm': 18.10237693786621, 'learning_rate': 9.661189358372458e-05, 'epoch': 0.34}                                                                                               
+{'loss': 2.2536, 'grad_norm': 48.93697738647461, 'learning_rate': 9.63510693792384e-05, 'epoch': 0.37}                                                                                                
+{'loss': 2.114, 'grad_norm': 7.182125091552734, 'learning_rate': 9.609024517475223e-05, 'epoch': 0.39}                                                                                                
+  4%|█████▉                                                                                                                                                 | 1500/38340 [1:02:05<24:33:57,  2.40s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.0802, 'grad_norm': 10.91389274597168, 'learning_rate': 9.582942097026605e-05, 'epoch': 0.42}                                                                                               
+{'loss': 1.9776, 'grad_norm': 0.01490597240626812, 'learning_rate': 9.556859676577988e-05, 'epoch': 0.44}                                                                                             
+{'loss': 1.8699, 'grad_norm': 18.077112197875977, 'learning_rate': 9.53077725612937e-05, 'epoch': 0.47}                                                                                               
+{'loss': 2.1616, 'grad_norm': 0.08876654505729675, 'learning_rate': 9.504694835680752e-05, 'epoch': 0.5}                                                                                              
+{'loss': 1.8535, 'grad_norm': 8.676136016845703, 'learning_rate': 9.478612415232134e-05, 'epoch': 0.52}                                                                                               
+  5%|███████▉                                                                                                                                               | 2000/38340 [1:22:06<24:11:00,  2.40s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.9466, 'grad_norm': 8.084248542785645, 'learning_rate': 9.452529994783517e-05, 'epoch': 0.55}                                                                                               
+{'loss': 2.0662, 'grad_norm': 0.09014645963907242, 'learning_rate': 9.426447574334899e-05, 'epoch': 0.57}                                                                                             
+{'loss': 1.8972, 'grad_norm': 26.242650985717773, 'learning_rate': 9.400365153886282e-05, 'epoch': 0.6}                                                                                               
+{'loss': 2.0679, 'grad_norm': 62.26055145263672, 'learning_rate': 9.374282733437664e-05, 'epoch': 0.63}                                                                                               
+{'loss': 2.0871, 'grad_norm': 12.176827430725098, 'learning_rate': 9.348200312989045e-05, 'epoch': 0.65}                                                                                              
+  7%|█████████▊                                                                                                                                             | 2500/38340 [1:42:05<23:47:22,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.0951, 'grad_norm': 18.9158992767334, 'learning_rate': 9.322117892540429e-05, 'epoch': 0.68}                                                                                                
+{'loss': 1.997, 'grad_norm': 30.54795265197754, 'learning_rate': 9.29603547209181e-05, 'epoch': 0.7}                                                                                                  
+{'loss': 2.2048, 'grad_norm': 17.17362403869629, 'learning_rate': 9.269953051643193e-05, 'epoch': 0.73}                                                                                               
+{'loss': 2.0158, 'grad_norm': 14.536439895629883, 'learning_rate': 9.243870631194575e-05, 'epoch': 0.76}                                                                                              
+{'loss': 1.7886, 'grad_norm': 7.090296268463135, 'learning_rate': 9.217788210745958e-05, 'epoch': 0.78}                                                                                               
+  8%|███████████▊                                                                                                                                           | 3000/38340 [2:02:02<23:20:58,  2.38s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.0623, 'grad_norm': 4.404428958892822, 'learning_rate': 9.19170579029734e-05, 'epoch': 0.81}                                                                                                
+{'loss': 2.3134, 'grad_norm': 12.612812042236328, 'learning_rate': 9.165623369848723e-05, 'epoch': 0.83}                                                                                              
+{'loss': 2.0913, 'grad_norm': 17.045103073120117, 'learning_rate': 9.139540949400105e-05, 'epoch': 0.86}                                                                                              
+{'loss': 1.8831, 'grad_norm': 6.634880542755127, 'learning_rate': 9.113458528951488e-05, 'epoch': 0.89}                                                                                               
+{'loss': 1.9448, 'grad_norm': 6.645255088806152, 'learning_rate': 9.08737610850287e-05, 'epoch': 0.91}                                                                                                
+  9%|█████████████▊                                                                                                                                         | 3500/38340 [2:21:57<23:01:52,  2.38s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.8067, 'grad_norm': 13.803555488586426, 'learning_rate': 9.061293688054253e-05, 'epoch': 0.94}                                                                                              
+{'loss': 1.8067, 'grad_norm': 8.050429344177246, 'learning_rate': 9.035211267605634e-05, 'epoch': 0.97}                                                                                               
+{'loss': 1.9329, 'grad_norm': 10.135700225830078, 'learning_rate': 9.009128847157017e-05, 'epoch': 0.99}                                                                                              
+ 10%|███████████████                                                                                                                                        | 3834/38340 [2:35:14<17:48:40,  1.86s/it]/home/taha/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 2.0187, 'grad_norm': 10.293619155883789, 'learning_rate': 8.983046426708399e-05, 'epoch': 1.02}                                                                                              
+{'loss': 2.1013, 'grad_norm': 9.693004608154297, 'learning_rate': 8.956964006259781e-05, 'epoch': 1.04}                                                                                               
+ 10%|███████████████▊                                                                                                                                       | 4000/38340 [2:41:51<22:48:26,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.9496, 'grad_norm': 14.494489669799805, 'learning_rate': 8.930881585811164e-05, 'epoch': 1.07}                                                                                              
+{'loss': 2.0272, 'grad_norm': 10.797805786132812, 'learning_rate': 8.904799165362546e-05, 'epoch': 1.1}                                                                                               
+{'loss': 1.9702, 'grad_norm': 7.54583215713501, 'learning_rate': 8.878716744913929e-05, 'epoch': 1.12}                                                                                                
+{'loss': 2.1834, 'grad_norm': 16.760822296142578, 'learning_rate': 8.85263432446531e-05, 'epoch': 1.15}                                                                                               
+{'loss': 2.0462, 'grad_norm': 10.265059471130371, 'learning_rate': 8.826551904016694e-05, 'epoch': 1.17}                                                                                              
+ 12%|█████████████████▋                                                                                                                                     | 4500/38340 [3:01:45<22:25:58,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.0165, 'grad_norm': 17.125612258911133, 'learning_rate': 8.800469483568075e-05, 'epoch': 1.2}                                                                                               
+{'loss': 1.8175, 'grad_norm': 61.218994140625, 'learning_rate': 8.774387063119458e-05, 'epoch': 1.23}                                                                                                 
+{'loss': 1.6566, 'grad_norm': 10.63183307647705, 'learning_rate': 8.74830464267084e-05, 'epoch': 1.25}                                                                                                
+{'loss': 1.9353, 'grad_norm': 8.009989738464355, 'learning_rate': 8.722222222222223e-05, 'epoch': 1.28}                                                                                               
+{'loss': 1.8525, 'grad_norm': 5.609614372253418, 'learning_rate': 8.696139801773605e-05, 'epoch': 1.3}                                                                                                
+ 13%|███████████████████▋                                                                                                                                   | 5000/38340 [3:21:40<22:10:25,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.981, 'grad_norm': 0.0013038176111876965, 'learning_rate': 8.670057381324988e-05, 'epoch': 1.33}                                                                                            
+{'loss': 1.6351, 'grad_norm': 7.829177379608154, 'learning_rate': 8.64397496087637e-05, 'epoch': 1.36}                                                                                                
+{'loss': 1.4177, 'grad_norm': 0.0, 'learning_rate': 8.617892540427753e-05, 'epoch': 1.38}                                                                                                             
+{'loss': 1.8769, 'grad_norm': 1.759771704673767, 'learning_rate': 8.591810119979134e-05, 'epoch': 1.41}                                                                                               
+{'loss': 2.0155, 'grad_norm': 10.08279800415039, 'learning_rate': 8.565727699530518e-05, 'epoch': 1.43}                                                                                               
+ 14%|█████████████████████▋                                                                                                                                 | 5500/38340 [3:41:35<21:52:13,  2.40s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.1079, 'grad_norm': 0.001949918339960277, 'learning_rate': 8.539645279081899e-05, 'epoch': 1.46}                                                                                            
+{'loss': 1.8984, 'grad_norm': 13.899057388305664, 'learning_rate': 8.513562858633281e-05, 'epoch': 1.49}                                                                                              
+{'loss': 1.9469, 'grad_norm': 5.884538173675537, 'learning_rate': 8.487480438184664e-05, 'epoch': 1.51}                                                                                               
+{'loss': 1.9628, 'grad_norm': 10.96461009979248, 'learning_rate': 8.461398017736046e-05, 'epoch': 1.54}                                                                                               
+{'loss': 1.9984, 'grad_norm': 20.478286743164062, 'learning_rate': 8.435315597287429e-05, 'epoch': 1.56}                                                                                              
+ 16%|███████████████████████▋                                                                                                                               | 6000/38340 [4:01:32<21:25:37,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.1051, 'grad_norm': 20.673694610595703, 'learning_rate': 8.40923317683881e-05, 'epoch': 1.59}                                                                                               
+{'loss': 2.1342, 'grad_norm': 17.169307708740234, 'learning_rate': 8.383150756390194e-05, 'epoch': 1.62}                                                                                              
+{'loss': 1.6414, 'grad_norm': 9.282987594604492, 'learning_rate': 8.357068335941575e-05, 'epoch': 1.64}                                                                                               
+{'loss': 1.8243, 'grad_norm': 25.639923095703125, 'learning_rate': 8.330985915492958e-05, 'epoch': 1.67}                                                                                              
+{'loss': 1.5088, 'grad_norm': 4.874622821807861, 'learning_rate': 8.30490349504434e-05, 'epoch': 1.7}                                                                                                 
+ 17%|█████████████████████████▌                                                                                                                             | 6500/38340 [4:21:28<21:10:56,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 2.0031, 'grad_norm': 0.07731714099645615, 'learning_rate': 8.278821074595723e-05, 'epoch': 1.72}                                                                                             
+{'loss': 1.636, 'grad_norm': 9.694314956665039, 'learning_rate': 8.252738654147105e-05, 'epoch': 1.75}                                                                                                
+{'loss': 2.1338, 'grad_norm': 22.814992904663086, 'learning_rate': 8.226656233698488e-05, 'epoch': 1.77}                                                                                              
+{'loss': 1.8189, 'grad_norm': 5.310168743133545, 'learning_rate': 8.20057381324987e-05, 'epoch': 1.8}                                                                                                 
+{'loss': 1.7391, 'grad_norm': 8.63571834564209, 'learning_rate': 8.174491392801253e-05, 'epoch': 1.83}                                                                                                
+ 18%|███████████████████████████▌                                                                                                                           | 7000/38340 [4:41:23<20:49:48,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.762, 'grad_norm': 44.31840896606445, 'learning_rate': 8.148408972352635e-05, 'epoch': 1.85}                                                                                                
+{'loss': 1.8339, 'grad_norm': 8.034146308898926, 'learning_rate': 8.122326551904018e-05, 'epoch': 1.88}                                                                                               
+{'loss': 2.0884, 'grad_norm': 14.81712818145752, 'learning_rate': 8.0962441314554e-05, 'epoch': 1.9}                                                                                                  
+{'loss': 2.0528, 'grad_norm': 6.243669033050537, 'learning_rate': 8.070161711006781e-05, 'epoch': 1.93}                                                                                               
+{'loss': 1.7113, 'grad_norm': 7.674466133117676, 'learning_rate': 8.044079290558164e-05, 'epoch': 1.96}                                                                                               
+ 20%|█████████████████████████████▌                                                                                                                         | 7500/38340 [5:01:18<20:30:04,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5274, 'grad_norm': 18.60625648498535, 'learning_rate': 8.017996870109546e-05, 'epoch': 1.98}                                                                                               
+ 20%|██████████████████████████████▏                                                                                                                        | 7668/38340 [5:07:59<15:53:58,  1.87s/it]/home/taha/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 1.5922, 'grad_norm': 9.13107681274414, 'learning_rate': 7.991914449660929e-05, 'epoch': 2.01}                                                                                                
+{'loss': 1.8756, 'grad_norm': 23.196922302246094, 'learning_rate': 7.965832029212311e-05, 'epoch': 2.03}                                                                                              
+{'loss': 1.8707, 'grad_norm': 6.093310356140137, 'learning_rate': 7.939749608763694e-05, 'epoch': 2.06}                                                                                               
+{'loss': 1.6374, 'grad_norm': 7.098631858825684, 'learning_rate': 7.913667188315076e-05, 'epoch': 2.09}                                                                                               
+ 21%|███████████████████████████████▌                                                                                                                       | 8000/38340 [5:21:11<20:05:06,  2.38s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.9596, 'grad_norm': 20.94117546081543, 'learning_rate': 7.887584767866459e-05, 'epoch': 2.11}                                                                                               
+{'loss': 1.6997, 'grad_norm': 12.431854248046875, 'learning_rate': 7.86150234741784e-05, 'epoch': 2.14}                                                                                               
+{'loss': 1.9374, 'grad_norm': 17.33441734313965, 'learning_rate': 7.835419926969223e-05, 'epoch': 2.16}                                                                                               
+{'loss': 1.5065, 'grad_norm': 29.904762268066406, 'learning_rate': 7.809337506520605e-05, 'epoch': 2.19}                                                                                              
+{'loss': 2.067, 'grad_norm': 45.53763961791992, 'learning_rate': 7.783255086071988e-05, 'epoch': 2.22}                                                                                                
+ 22%|█████████████████████████████████▍                                                                                                                     | 8500/38340 [5:41:05<19:48:24,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6715, 'grad_norm': 9.525962829589844, 'learning_rate': 7.75717266562337e-05, 'epoch': 2.24}                                                                                                
+{'loss': 1.584, 'grad_norm': 0.0, 'learning_rate': 7.731090245174753e-05, 'epoch': 2.27}                                                                                                              
+{'loss': 1.8868, 'grad_norm': 9.336136817932129, 'learning_rate': 7.705007824726135e-05, 'epoch': 2.3}                                                                                                
+{'loss': 1.91, 'grad_norm': 13.021170616149902, 'learning_rate': 7.678925404277518e-05, 'epoch': 2.32}                                                                                                
+{'loss': 1.9469, 'grad_norm': 6.527190208435059, 'learning_rate': 7.6528429838289e-05, 'epoch': 2.35}                                                                                                 
+ 23%|███████████████████████████████████▍                                                                                                                   | 9000/38340 [6:00:59<19:27:02,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.9085, 'grad_norm': 0.0, 'learning_rate': 7.626760563380281e-05, 'epoch': 2.37}                                                                                                             
+{'loss': 1.9462, 'grad_norm': 4.090433597564697, 'learning_rate': 7.600678142931664e-05, 'epoch': 2.4}                                                                                                
+{'loss': 1.7186, 'grad_norm': 4.180470943450928, 'learning_rate': 7.574595722483046e-05, 'epoch': 2.43}                                                                                               
+{'loss': 2.1218, 'grad_norm': 13.165892601013184, 'learning_rate': 7.548513302034429e-05, 'epoch': 2.45}                                                                                              
+{'loss': 1.9809, 'grad_norm': 8.36938762664795, 'learning_rate': 7.522430881585811e-05, 'epoch': 2.48}                                                                                                
+ 25%|█████████████████████████████████████▍                                                                                                                 | 9500/38340 [6:20:53<19:08:51,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.4107, 'grad_norm': 12.005611419677734, 'learning_rate': 7.496348461137194e-05, 'epoch': 2.5}                                                                                               
+{'loss': 1.912, 'grad_norm': 8.186158180236816, 'learning_rate': 7.470266040688576e-05, 'epoch': 2.53}                                                                                                
+{'loss': 1.7201, 'grad_norm': 16.005794525146484, 'learning_rate': 7.444183620239959e-05, 'epoch': 2.56}                                                                                              
+{'loss': 1.6906, 'grad_norm': 7.410107135772705, 'learning_rate': 7.41810119979134e-05, 'epoch': 2.58}                                                                                                
+{'loss': 1.9276, 'grad_norm': 12.247529983520508, 'learning_rate': 7.392018779342724e-05, 'epoch': 2.61}                                                                                              
+ 26%|███████████████████████████████████████                                                                                                               | 10000/38340 [6:40:48<18:50:07,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7154, 'grad_norm': 0.0, 'learning_rate': 7.365936358894105e-05, 'epoch': 2.63}                                                                                                             
+{'loss': 1.6488, 'grad_norm': 7.0339131355285645, 'learning_rate': 7.339853938445488e-05, 'epoch': 2.66}                                                                                              
+{'loss': 1.5703, 'grad_norm': 3.358063258929178e-05, 'learning_rate': 7.31377151799687e-05, 'epoch': 2.69}                                                                                            
+{'loss': 1.9661, 'grad_norm': 7.818761348724365, 'learning_rate': 7.287689097548253e-05, 'epoch': 2.71}                                                                                               
+{'loss': 2.0031, 'grad_norm': 7.764389991760254, 'learning_rate': 7.261606677099635e-05, 'epoch': 2.74}                                                                                               
+ 27%|█████████████████████████████████████████                                                                                                             | 10500/38340 [7:00:44<18:31:09,  2.39s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7787, 'grad_norm': 0.004854331724345684, 'learning_rate': 7.235524256651017e-05, 'epoch': 2.76}                                                                                            
+{'loss': 1.8998, 'grad_norm': 23.700252532958984, 'learning_rate': 7.2094418362024e-05, 'epoch': 2.79}                                                                                                
+{'loss': 1.4722, 'grad_norm': 6.167416572570801, 'learning_rate': 7.183359415753781e-05, 'epoch': 2.82}                                                                                               
+{'loss': 1.9276, 'grad_norm': 9.42287826538086, 'learning_rate': 7.157276995305165e-05, 'epoch': 2.84}                                                                                                
+{'loss': 1.7784, 'grad_norm': 20.2275390625, 'learning_rate': 7.131194574856546e-05, 'epoch': 2.87}                                                                                                   
+ 29%|███████████████████████████████████████████                                                                                                           | 11000/38340 [7:20:32<17:55:49,  2.36s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.4469, 'grad_norm': 9.499032020568848, 'learning_rate': 7.10511215440793e-05, 'epoch': 2.9}                                                                                                 
+{'loss': 2.047, 'grad_norm': 7.9249372482299805, 'learning_rate': 7.079029733959311e-05, 'epoch': 2.92}                                                                                               
+{'loss': 1.623, 'grad_norm': 0.0005631345557048917, 'learning_rate': 7.052947313510694e-05, 'epoch': 2.95}                                                                                            
+{'loss': 1.737, 'grad_norm': 21.36747169494629, 'learning_rate': 7.026864893062076e-05, 'epoch': 2.97}                                                                                                
+{'loss': 1.8503, 'grad_norm': 12.997416496276855, 'learning_rate': 7.000782472613459e-05, 'epoch': 3.0}                                                                                               
+ 30%|████████████████████████████████████████████▉                                                                                                         | 11500/38340 [7:40:17<17:34:05,  2.36s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+ 30%|█████████████████████████████████████████████                                                                                                         | 11502/38340 [7:40:20<13:54:39,  1.87s/it]/home/taha/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 1.9225, 'grad_norm': 29.78322410583496, 'learning_rate': 6.97470005216484e-05, 'epoch': 3.03}                                                                                                
+{'loss': 1.9048, 'grad_norm': 4.385750770568848, 'learning_rate': 6.948617631716224e-05, 'epoch': 3.05}                                                                                               
+{'loss': 2.177, 'grad_norm': 24.943235397338867, 'learning_rate': 6.922535211267605e-05, 'epoch': 3.08}                                                                                               
+{'loss': 1.7193, 'grad_norm': 0.0, 'learning_rate': 6.896452790818989e-05, 'epoch': 3.1}                                                                                                              
+{'loss': 1.9746, 'grad_norm': 0.0, 'learning_rate': 6.87037037037037e-05, 'epoch': 3.13}                                                                                                              
+ 31%|██████████████████████████████████████████████▉                                                                                                       | 12000/38340 [8:00:23<17:33:16,  2.40s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7564, 'grad_norm': 1.3405128717422485, 'learning_rate': 6.844287949921753e-05, 'epoch': 3.16}                                                                                              
+{'loss': 1.6658, 'grad_norm': 8.961923599243164, 'learning_rate': 6.818205529473135e-05, 'epoch': 3.18}                                                                                               
+{'loss': 1.5359, 'grad_norm': 16.856243133544922, 'learning_rate': 6.792123109024517e-05, 'epoch': 3.21}                                                                                              
+{'loss': 1.7413, 'grad_norm': 30.58161735534668, 'learning_rate': 6.7660406885759e-05, 'epoch': 3.23}                                                                                                 
+{'loss': 1.6416, 'grad_norm': 49.66740798950195, 'learning_rate': 6.739958268127282e-05, 'epoch': 3.26}                                                                                               
+ 33%|████████████████████████████████████████████████▉                                                                                                     | 12500/38340 [8:20:35<23:32:13,  3.28s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5698, 'grad_norm': 4.580024719238281, 'learning_rate': 6.713875847678665e-05, 'epoch': 3.29}                                                                                               
+{'loss': 1.799, 'grad_norm': 8.76601791381836, 'learning_rate': 6.687793427230046e-05, 'epoch': 3.31}                                                                                                 
+{'loss': 1.5708, 'grad_norm': 9.713713645935059, 'learning_rate': 6.66171100678143e-05, 'epoch': 3.34}                                                                                                
+{'loss': 1.8831, 'grad_norm': 11.084639549255371, 'learning_rate': 6.635628586332811e-05, 'epoch': 3.36}                                                                                              
+{'loss': 1.652, 'grad_norm': 15.347783088684082, 'learning_rate': 6.609546165884194e-05, 'epoch': 3.39}                                                                                               
+ 34%|██████████████████████████████████████████████████▊                                                                                                   | 13000/38340 [8:51:30<25:37:47,  3.64s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5935, 'grad_norm': 12.810613632202148, 'learning_rate': 6.583463745435576e-05, 'epoch': 3.42}                                                                                              
+{'loss': 1.7929, 'grad_norm': 4.337582111358643, 'learning_rate': 6.557381324986959e-05, 'epoch': 3.44}                                                                                               
+{'loss': 1.321, 'grad_norm': 11.795368194580078, 'learning_rate': 6.531298904538341e-05, 'epoch': 3.47}                                                                                               
+{'loss': 1.3727, 'grad_norm': 11.138854026794434, 'learning_rate': 6.505216484089724e-05, 'epoch': 3.5}                                                                                               
+{'loss': 1.972, 'grad_norm': 0.5963196158409119, 'learning_rate': 6.479134063641106e-05, 'epoch': 3.52}                                                                                               
+ 35%|████████████████████████████████████████████████████▊                                                                                                 | 13500/38340 [9:15:26<17:00:44,  2.47s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6526, 'grad_norm': 13.415792465209961, 'learning_rate': 6.453051643192489e-05, 'epoch': 3.55}                                                                                              
+{'loss': 1.6365, 'grad_norm': 7.957842826843262, 'learning_rate': 6.42696922274387e-05, 'epoch': 3.57}                                                                                                
+{'loss': 1.5363, 'grad_norm': 2.9940972328186035, 'learning_rate': 6.400886802295254e-05, 'epoch': 3.6}                                                                                               
+{'loss': 1.6934, 'grad_norm': 19.26164436340332, 'learning_rate': 6.374804381846635e-05, 'epoch': 3.63}                                                                                               
+{'loss': 1.6983, 'grad_norm': 12.902255058288574, 'learning_rate': 6.348721961398017e-05, 'epoch': 3.65}                                                                                              
+ 37%|██████████████████████████████████████████████████████▊                                                                                               | 14000/38340 [9:36:05<16:38:33,  2.46s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6879, 'grad_norm': 0.0, 'learning_rate': 6.3226395409494e-05, 'epoch': 3.68}                                                                                                               
+{'loss': 1.7924, 'grad_norm': 6.9814558029174805, 'learning_rate': 6.296557120500782e-05, 'epoch': 3.7}                                                                                               
+{'loss': 1.85, 'grad_norm': 5.872030735015869, 'learning_rate': 6.270474700052165e-05, 'epoch': 3.73}                                                                                                 
+{'loss': 1.5877, 'grad_norm': 0.010935207828879356, 'learning_rate': 6.244392279603547e-05, 'epoch': 3.76}                                                                                            
+{'loss': 1.6632, 'grad_norm': 15.376049995422363, 'learning_rate': 6.21830985915493e-05, 'epoch': 3.78}                                                                                               
+ 38%|████████████████████████████████████████████████████████▋                                                                                             | 14500/38340 [9:56:47<16:31:06,  2.49s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.682, 'grad_norm': 31.782424926757812, 'learning_rate': 6.192227438706311e-05, 'epoch': 3.81}                                                                                               
+{'loss': 1.6112, 'grad_norm': 9.798256874084473, 'learning_rate': 6.166145018257694e-05, 'epoch': 3.83}                                                                                               
+{'loss': 1.5028, 'grad_norm': 6.4593329429626465, 'learning_rate': 6.140062597809076e-05, 'epoch': 3.86}                                                                                              
+{'loss': 1.4854, 'grad_norm': 10.45497989654541, 'learning_rate': 6.113980177360459e-05, 'epoch': 3.89}                                                                                               
+{'loss': 1.4847, 'grad_norm': 4.8540472984313965, 'learning_rate': 6.087897756911841e-05, 'epoch': 3.91}                                                                                              
+ 39%|██████████████████████████████████████████████████████████▎                                                                                          | 15000/38340 [10:17:21<15:59:48,  2.47s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7369, 'grad_norm': 5.823991775512695, 'learning_rate': 6.0618153364632234e-05, 'epoch': 3.94}                                                                                              
+{'loss': 1.6795, 'grad_norm': 3.3473052978515625, 'learning_rate': 6.035732916014607e-05, 'epoch': 3.96}                                                                                              
+{'loss': 1.4854, 'grad_norm': 7.4055962562561035, 'learning_rate': 6.0096504955659895e-05, 'epoch': 3.99}                                                                                             
+ 40%|███████████████████████████████████████████████████████████▌                                                                                         | 15336/38340 [10:31:06<12:21:33,  1.93s/it]/home/taha/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 2.0389, 'grad_norm': 5.10688591003418, 'learning_rate': 5.983568075117372e-05, 'epoch': 4.02}                                                                                                
+{'loss': 1.6599, 'grad_norm': 6.197188854217529, 'learning_rate': 5.9574856546687543e-05, 'epoch': 4.04}                                                                                              
+ 40%|████████████████████████████████████████████████████████████▏                                                                                        | 15500/38340 [10:37:50<15:41:28,  2.47s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.4806, 'grad_norm': 5.523056507110596, 'learning_rate': 5.931403234220137e-05, 'epoch': 4.07}                                                                                               
+{'loss': 1.6564, 'grad_norm': 11.749167442321777, 'learning_rate': 5.9053208137715185e-05, 'epoch': 4.09}                                                                                             
+{'loss': 1.1735, 'grad_norm': 8.9542818069458, 'learning_rate': 5.879238393322901e-05, 'epoch': 4.12}                                                                                                 
+{'loss': 2.0073, 'grad_norm': 74.58444213867188, 'learning_rate': 5.853155972874283e-05, 'epoch': 4.15}                                                                                               
+{'loss': 1.4202, 'grad_norm': 10.25340461730957, 'learning_rate': 5.827073552425666e-05, 'epoch': 4.17}                                                                                               
+ 42%|██████████████████████████████████████████████████████████████▏                                                                                      | 16000/38340 [10:58:19<15:11:32,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.2264, 'grad_norm': 7.05038595199585, 'learning_rate': 5.800991131977048e-05, 'epoch': 4.2}                                                                                                 
+{'loss': 1.7406, 'grad_norm': 13.710162162780762, 'learning_rate': 5.7749087115284305e-05, 'epoch': 4.23}                                                                                             
+{'loss': 1.7049, 'grad_norm': 8.548068046569824, 'learning_rate': 5.748826291079813e-05, 'epoch': 4.25}                                                                                               
+{'loss': 1.4575, 'grad_norm': 8.667801856994629, 'learning_rate': 5.722743870631195e-05, 'epoch': 4.28}                                                                                               
+{'loss': 1.5372, 'grad_norm': 0.7082390189170837, 'learning_rate': 5.696661450182578e-05, 'epoch': 4.3}                                                                                               
+ 43%|████████████████████████████████████████████████████████████████                                                                                     | 16500/38340 [11:18:49<14:55:55,  2.46s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7208, 'grad_norm': 26.637569427490234, 'learning_rate': 5.67057902973396e-05, 'epoch': 4.33}                                                                                               
+{'loss': 1.4605, 'grad_norm': 20.876649856567383, 'learning_rate': 5.6444966092853425e-05, 'epoch': 4.36}                                                                                             
+{'loss': 1.8244, 'grad_norm': 9.06976318359375, 'learning_rate': 5.618414188836725e-05, 'epoch': 4.38}                                                                                                
+{'loss': 1.9095, 'grad_norm': 12.619449615478516, 'learning_rate': 5.592331768388107e-05, 'epoch': 4.41}                                                                                              
+{'loss': 1.492, 'grad_norm': 8.241255760192871, 'learning_rate': 5.56624934793949e-05, 'epoch': 4.43}                                                                                                 
+ 44%|██████████████████████████████████████████████████████████████████                                                                                   | 17000/38340 [11:39:19<14:28:56,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.9495, 'grad_norm': 21.329286575317383, 'learning_rate': 5.540166927490872e-05, 'epoch': 4.46}                                                                                              
+{'loss': 1.7018, 'grad_norm': 0.0, 'learning_rate': 5.5140845070422545e-05, 'epoch': 4.49}                                                                                                            
+{'loss': 1.9859, 'grad_norm': 21.10221290588379, 'learning_rate': 5.488002086593637e-05, 'epoch': 4.51}                                                                                               
+{'loss': 1.3811, 'grad_norm': 8.6951904296875, 'learning_rate': 5.4619196661450186e-05, 'epoch': 4.54}                                                                                                
+{'loss': 1.5443, 'grad_norm': 8.537678718566895, 'learning_rate': 5.435837245696401e-05, 'epoch': 4.56}                                                                                               
+ 46%|████████████████████████████████████████████████████████████████████                                                                                 | 17500/38340 [11:59:47<14:08:41,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.9209, 'grad_norm': 0.0, 'learning_rate': 5.4097548252477834e-05, 'epoch': 4.59}                                                                                                            
+{'loss': 1.5188, 'grad_norm': 0.0012967034708708525, 'learning_rate': 5.383672404799166e-05, 'epoch': 4.62}                                                                                           
+{'loss': 1.8191, 'grad_norm': 30.619483947753906, 'learning_rate': 5.357589984350548e-05, 'epoch': 4.64}                                                                                              
+{'loss': 1.7351, 'grad_norm': 17.454294204711914, 'learning_rate': 5.3315075639019306e-05, 'epoch': 4.67}                                                                                             
+{'loss': 1.3064, 'grad_norm': 11.431941032409668, 'learning_rate': 5.305425143453313e-05, 'epoch': 4.69}                                                                                              
+ 47%|█████████████████████████████████████████████████████████████████████▉                                                                               | 18000/38340 [12:20:10<13:50:28,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6832, 'grad_norm': 0.7141503691673279, 'learning_rate': 5.2793427230046954e-05, 'epoch': 4.72}                                                                                             
+{'loss': 1.6395, 'grad_norm': 14.51099681854248, 'learning_rate': 5.253260302556078e-05, 'epoch': 4.75}                                                                                               
+{'loss': 1.6028, 'grad_norm': 0.0, 'learning_rate': 5.22717788210746e-05, 'epoch': 4.77}                                                                                                              
+{'loss': 1.5279, 'grad_norm': 13.352680206298828, 'learning_rate': 5.2010954616588426e-05, 'epoch': 4.8}                                                                                              
+{'loss': 1.6118, 'grad_norm': 26.594776153564453, 'learning_rate': 5.175013041210225e-05, 'epoch': 4.83}                                                                                              
+ 48%|███████████████████████████████████████████████████████████████████████▉                                                                             | 18500/38340 [12:40:36<13:29:04,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.429, 'grad_norm': 9.837305068969727, 'learning_rate': 5.1489306207616074e-05, 'epoch': 4.85}                                                                                               
+{'loss': 1.846, 'grad_norm': 44.03074645996094, 'learning_rate': 5.12284820031299e-05, 'epoch': 4.88}                                                                                                 
+{'loss': 2.1901, 'grad_norm': 11.120595932006836, 'learning_rate': 5.096765779864372e-05, 'epoch': 4.9}                                                                                               
+{'loss': 1.7926, 'grad_norm': 0.3218226730823517, 'learning_rate': 5.0706833594157547e-05, 'epoch': 4.93}                                                                                             
+{'loss': 1.6248, 'grad_norm': 8.253840446472168, 'learning_rate': 5.0446009389671364e-05, 'epoch': 4.96}                                                                                              
+ 50%|█████████████████████████████████████████████████████████████████████████▊                                                                           | 19000/38340 [13:01:01<13:09:41,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.4055, 'grad_norm': 4.596214771270752, 'learning_rate': 5.018518518518519e-05, 'epoch': 4.98}                                                                                               
+ 50%|██████████████████████████████████████████████████████████████████████████▌                                                                          | 19170/38340 [13:07:56<10:13:10,  1.92s/it]/home/taha/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 1.9421, 'grad_norm': 29.971664428710938, 'learning_rate': 4.992436098069901e-05, 'epoch': 5.01}                                                                                              
+{'loss': 1.7018, 'grad_norm': 19.723007202148438, 'learning_rate': 4.966353677621283e-05, 'epoch': 5.03}                                                                                              
+{'loss': 1.7512, 'grad_norm': 13.197504997253418, 'learning_rate': 4.940271257172665e-05, 'epoch': 5.06}                                                                                              
+{'loss': 1.8342, 'grad_norm': 10.123926162719727, 'learning_rate': 4.914188836724048e-05, 'epoch': 5.09}                                                                                              
+ 51%|███████████████████████████████████████████████████████████████████████████▊                                                                         | 19500/38340 [13:21:24<12:48:59,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7446, 'grad_norm': 11.059913635253906, 'learning_rate': 4.888106416275431e-05, 'epoch': 5.11}                                                                                              
+{'loss': 1.4201, 'grad_norm': 13.282978057861328, 'learning_rate': 4.862023995826813e-05, 'epoch': 5.14}                                                                                              
+{'loss': 1.9212, 'grad_norm': 14.239920616149902, 'learning_rate': 4.8359415753781956e-05, 'epoch': 5.16}                                                                                             
+{'loss': 1.5028, 'grad_norm': 27.499221801757812, 'learning_rate': 4.809859154929578e-05, 'epoch': 5.19}                                                                                              
+{'loss': 1.4683, 'grad_norm': 0.0, 'learning_rate': 4.7837767344809604e-05, 'epoch': 5.22}                                                                                                            
+ 52%|█████████████████████████████████████████████████████████████████████████████▋                                                                       | 20000/38340 [13:41:47<12:28:06,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7436, 'grad_norm': 16.977399826049805, 'learning_rate': 4.757694314032343e-05, 'epoch': 5.24}                                                                                              
+{'loss': 1.4639, 'grad_norm': 10.448241233825684, 'learning_rate': 4.731611893583725e-05, 'epoch': 5.27}                                                                                              
+{'loss': 1.5453, 'grad_norm': 70.47180938720703, 'learning_rate': 4.7055294731351076e-05, 'epoch': 5.29}                                                                                              
+{'loss': 1.72, 'grad_norm': 19.297832489013672, 'learning_rate': 4.67944705268649e-05, 'epoch': 5.32}                                                                                                 
+{'loss': 1.8857, 'grad_norm': 21.26609230041504, 'learning_rate': 4.6533646322378724e-05, 'epoch': 5.35}                                                                                              
+ 53%|███████████████████████████████████████████████████████████████████████████████▋                                                                     | 20500/38340 [14:02:11<12:07:24,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.4498, 'grad_norm': 12.684021949768066, 'learning_rate': 4.627282211789255e-05, 'epoch': 5.37}                                                                                              
+{'loss': 1.3525, 'grad_norm': 4.176112651824951, 'learning_rate': 4.6011997913406365e-05, 'epoch': 5.4}                                                                                               
+{'loss': 1.4828, 'grad_norm': 18.575916290283203, 'learning_rate': 4.575117370892019e-05, 'epoch': 5.43}                                                                                              
+{'loss': 1.4842, 'grad_norm': 17.3985595703125, 'learning_rate': 4.5490349504434013e-05, 'epoch': 5.45}                                                                                               
+{'loss': 1.3678, 'grad_norm': 0.0037442550528794527, 'learning_rate': 4.522952529994784e-05, 'epoch': 5.48}                                                                                           
+ 55%|█████████████████████████████████████████████████████████████████████████████████▌                                                                   | 21000/38340 [14:22:34<11:43:50,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.581, 'grad_norm': 12.44382381439209, 'learning_rate': 4.496870109546166e-05, 'epoch': 5.5}                                                                                                 
+{'loss': 1.9346, 'grad_norm': 5.1475701332092285, 'learning_rate': 4.4707876890975485e-05, 'epoch': 5.53}                                                                                             
+{'loss': 1.4281, 'grad_norm': 14.259345054626465, 'learning_rate': 4.444705268648931e-05, 'epoch': 5.56}                                                                                              
+{'loss': 1.7183, 'grad_norm': 5.886612892150879, 'learning_rate': 4.4186228482003134e-05, 'epoch': 5.58}                                                                                              
+{'loss': 1.6377, 'grad_norm': 0.0, 'learning_rate': 4.392540427751696e-05, 'epoch': 5.61}                                                                                                             
+ 56%|███████████████████████████████████████████████████████████████████████████████████▌                                                                 | 21500/38340 [14:42:57<11:26:50,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.9323, 'grad_norm': 10.938538551330566, 'learning_rate': 4.366458007303078e-05, 'epoch': 5.63}                                                                                              
+{'loss': 1.7818, 'grad_norm': 36.14590072631836, 'learning_rate': 4.3403755868544606e-05, 'epoch': 5.66}                                                                                              
+{'loss': 1.7536, 'grad_norm': 14.624951362609863, 'learning_rate': 4.314293166405843e-05, 'epoch': 5.69}                                                                                              
+{'loss': 1.4048, 'grad_norm': 0.46303147077560425, 'learning_rate': 4.2882107459572254e-05, 'epoch': 5.71}                                                                                            
+{'loss': 1.8942, 'grad_norm': 11.725990295410156, 'learning_rate': 4.262128325508608e-05, 'epoch': 5.74}                                                                                              
+ 57%|█████████████████████████████████████████████████████████████████████████████████████▍                                                               | 22000/38340 [15:03:20<11:07:22,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.4965, 'grad_norm': 10.685678482055664, 'learning_rate': 4.23604590505999e-05, 'epoch': 5.76}                                                                                               
+{'loss': 1.5198, 'grad_norm': 16.492082595825195, 'learning_rate': 4.2099634846113726e-05, 'epoch': 5.79}                                                                                             
+{'loss': 1.8154, 'grad_norm': 5.765718460083008, 'learning_rate': 4.183881064162754e-05, 'epoch': 5.82}                                                                                               
+{'loss': 1.5837, 'grad_norm': 24.920700073242188, 'learning_rate': 4.157798643714137e-05, 'epoch': 5.84}                                                                                              
+{'loss': 1.8474, 'grad_norm': 10.033260345458984, 'learning_rate': 4.131716223265519e-05, 'epoch': 5.87}                                                                                              
+ 59%|███████████████████████████████████████████████████████████████████████████████████████▍                                                             | 22500/38340 [15:23:44<10:46:51,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5284, 'grad_norm': 9.457319259643555, 'learning_rate': 4.1056338028169015e-05, 'epoch': 5.89}                                                                                              
+{'loss': 1.4413, 'grad_norm': 0.02489042468369007, 'learning_rate': 4.079551382368284e-05, 'epoch': 5.92}                                                                                             
+{'loss': 1.4245, 'grad_norm': 0.3064672648906708, 'learning_rate': 4.053468961919666e-05, 'epoch': 5.95}                                                                                              
+{'loss': 1.6468, 'grad_norm': 7.726093769073486, 'learning_rate': 4.027386541471049e-05, 'epoch': 5.97}                                                                                               
+{'loss': 1.4543, 'grad_norm': 5.433366298675537, 'learning_rate': 4.001304121022431e-05, 'epoch': 6.0}                                                                                                
+ 60%|█████████████████████████████████████████████████████████████████████████████████████████▍                                                           | 23000/38340 [15:44:08<10:24:59,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+ 60%|██████████████████████████████████████████████████████████████████████████████████████████                                                            | 23004/38340 [15:44:16<8:11:29,  1.92s/it]/home/taha/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 1.6207, 'grad_norm': 10.413575172424316, 'learning_rate': 3.9752217005738135e-05, 'epoch': 6.03}                                                                                             
+{'loss': 1.1779, 'grad_norm': 70.40887451171875, 'learning_rate': 3.949139280125196e-05, 'epoch': 6.05}                                                                                               
+{'loss': 1.2761, 'grad_norm': 7.4012932777404785, 'learning_rate': 3.923056859676578e-05, 'epoch': 6.08}                                                                                              
+{'loss': 1.4997, 'grad_norm': 4.345128059387207, 'learning_rate': 3.896974439227961e-05, 'epoch': 6.1}                                                                                                
+{'loss': 1.5732, 'grad_norm': 3.820732831954956, 'learning_rate': 3.870892018779343e-05, 'epoch': 6.13}                                                                                               
+ 61%|███████████████████████████████████████████████████████████████████████████████████████████▎                                                         | 23500/38340 [16:04:27<10:02:25,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7106, 'grad_norm': 50.27632141113281, 'learning_rate': 3.8448095983307255e-05, 'epoch': 6.16}                                                                                              
+{'loss': 1.5753, 'grad_norm': 16.049213409423828, 'learning_rate': 3.818727177882108e-05, 'epoch': 6.18}                                                                                              
+{'loss': 1.6276, 'grad_norm': 7.122135639190674, 'learning_rate': 3.79264475743349e-05, 'epoch': 6.21}                                                                                                
+{'loss': 1.6061, 'grad_norm': 6.0142621994018555, 'learning_rate': 3.766562336984872e-05, 'epoch': 6.23}                                                                                              
+{'loss': 1.5333, 'grad_norm': 11.506448745727539, 'learning_rate': 3.7404799165362544e-05, 'epoch': 6.26}                                                                                             
+ 63%|█████████████████████████████████████████████████████████████████████████████████████████████▉                                                        | 24000/38340 [16:24:49<9:43:08,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7678, 'grad_norm': 19.228912353515625, 'learning_rate': 3.714397496087637e-05, 'epoch': 6.29}                                                                                              
+{'loss': 1.6038, 'grad_norm': 12.94283390045166, 'learning_rate': 3.688315075639019e-05, 'epoch': 6.31}                                                                                               
+{'loss': 1.7745, 'grad_norm': 30.966266632080078, 'learning_rate': 3.6622326551904017e-05, 'epoch': 6.34}                                                                                             
+{'loss': 1.5691, 'grad_norm': 7.004697799682617, 'learning_rate': 3.636150234741784e-05, 'epoch': 6.36}                                                                                               
+{'loss': 1.4575, 'grad_norm': 0.0, 'learning_rate': 3.6100678142931665e-05, 'epoch': 6.39}                                                                                                            
+ 64%|███████████████████████████████████████████████████████████████████████████████████████████████▊                                                      | 24500/38340 [16:45:11<9:27:54,  2.46s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.4422, 'grad_norm': 7.750059127807617, 'learning_rate': 3.583985393844549e-05, 'epoch': 6.42}                                                                                               
+{'loss': 1.4593, 'grad_norm': 5.084583759307861, 'learning_rate': 3.557902973395931e-05, 'epoch': 6.44}                                                                                               
+{'loss': 1.6429, 'grad_norm': 12.121562957763672, 'learning_rate': 3.531820552947314e-05, 'epoch': 6.47}                                                                                              
+{'loss': 1.2629, 'grad_norm': 2.8462557792663574, 'learning_rate': 3.505738132498696e-05, 'epoch': 6.49}                                                                                              
+{'loss': 1.8432, 'grad_norm': 0.0, 'learning_rate': 3.4796557120500785e-05, 'epoch': 6.52}                                                                                                            
+ 65%|█████████████████████████████████████████████████████████████████████████████████████████████████▊                                                    | 25000/38340 [17:05:36<9:01:20,  2.43s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5668, 'grad_norm': 16.816768646240234, 'learning_rate': 3.453573291601461e-05, 'epoch': 6.55}                                                                                              
+{'loss': 1.6804, 'grad_norm': 6.707198619842529, 'learning_rate': 3.427490871152843e-05, 'epoch': 6.57}                                                                                               
+{'loss': 1.9197, 'grad_norm': 14.51738166809082, 'learning_rate': 3.401408450704226e-05, 'epoch': 6.6}                                                                                                
+{'loss': 1.5874, 'grad_norm': 6.0562591552734375, 'learning_rate': 3.375326030255608e-05, 'epoch': 6.62}                                                                                              
+{'loss': 1.6421, 'grad_norm': 6.999229431152344, 'learning_rate': 3.3492436098069905e-05, 'epoch': 6.65}                                                                                              
+ 67%|███████████████████████████████████████████████████████████████████████████████████████████████████▊                                                  | 25500/38340 [17:25:56<8:42:04,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5087, 'grad_norm': 7.623289585113525, 'learning_rate': 3.323161189358372e-05, 'epoch': 6.68}                                                                                               
+{'loss': 1.954, 'grad_norm': 24.83568572998047, 'learning_rate': 3.2970787689097546e-05, 'epoch': 6.7}                                                                                                
+{'loss': 1.8491, 'grad_norm': 27.41164779663086, 'learning_rate': 3.270996348461137e-05, 'epoch': 6.73}                                                                                               
+{'loss': 1.8567, 'grad_norm': 19.717559814453125, 'learning_rate': 3.2449139280125194e-05, 'epoch': 6.76}                                                                                             
+{'loss': 1.5393, 'grad_norm': 0.0, 'learning_rate': 3.218831507563902e-05, 'epoch': 6.78}                                                                                                             
+ 68%|█████████████████████████████████████████████████████████████████████████████████████████████████████▋                                                | 26000/38340 [17:46:17<8:22:29,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5459, 'grad_norm': 18.277128219604492, 'learning_rate': 3.192749087115284e-05, 'epoch': 6.81}                                                                                              
+{'loss': 1.4534, 'grad_norm': 0.3080892562866211, 'learning_rate': 3.1666666666666666e-05, 'epoch': 6.83}                                                                                             
+{'loss': 1.3665, 'grad_norm': 34.06306838989258, 'learning_rate': 3.140584246218049e-05, 'epoch': 6.86}                                                                                               
+{'loss': 1.6326, 'grad_norm': 7.323645114898682, 'learning_rate': 3.1145018257694314e-05, 'epoch': 6.89}                                                                                              
+{'loss': 1.6322, 'grad_norm': 12.18551254272461, 'learning_rate': 3.088419405320814e-05, 'epoch': 6.91}                                                                                               
+ 69%|███████████████████████████████████████████████████████████████████████████████████████████████████████▋                                              | 26500/38340 [18:06:38<8:02:31,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6869, 'grad_norm': 5.673243045806885, 'learning_rate': 3.062336984872196e-05, 'epoch': 6.94}                                                                                               
+{'loss': 1.6092, 'grad_norm': 7.519531726837158, 'learning_rate': 3.0362545644235786e-05, 'epoch': 6.96}                                                                                              
+{'loss': 1.7833, 'grad_norm': 6.99215841293335, 'learning_rate': 3.0101721439749607e-05, 'epoch': 6.99}                                                                                               
+ 70%|█████████████████████████████████████████████████████████████████████████████████████████████████████████                                             | 26838/38340 [18:20:21<6:04:49,  1.90s/it]/home/taha/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 1.8028, 'grad_norm': 5.407585620880127, 'learning_rate': 2.984089723526343e-05, 'epoch': 7.02}                                                                                               
+{'loss': 1.4668, 'grad_norm': 17.354265213012695, 'learning_rate': 2.9580073030777255e-05, 'epoch': 7.04}                                                                                             
+ 70%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                            | 27000/38340 [18:26:57<7:42:19,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.9764, 'grad_norm': 13.779863357543945, 'learning_rate': 2.931924882629108e-05, 'epoch': 7.07}                                                                                              
+{'loss': 1.5407, 'grad_norm': 0.00926983542740345, 'learning_rate': 2.9058424621804903e-05, 'epoch': 7.09}                                                                                            
+{'loss': 1.5708, 'grad_norm': 8.051595687866211, 'learning_rate': 2.8797600417318727e-05, 'epoch': 7.12}                                                                                              
+{'loss': 1.4375, 'grad_norm': 60.01863479614258, 'learning_rate': 2.853677621283255e-05, 'epoch': 7.15}                                                                                               
+{'loss': 1.7278, 'grad_norm': 28.982345581054688, 'learning_rate': 2.8275952008346375e-05, 'epoch': 7.17}                                                                                             
+ 72%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                          | 27500/38340 [18:48:49<9:55:04,  3.29s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.3858, 'grad_norm': 7.4302849769592285, 'learning_rate': 2.8015127803860196e-05, 'epoch': 7.2}                                                                                              
+{'loss': 1.4761, 'grad_norm': 0.0, 'learning_rate': 2.775430359937402e-05, 'epoch': 7.22}                                                                                                             
+{'loss': 1.7666, 'grad_norm': 0.9213008880615234, 'learning_rate': 2.7493479394887844e-05, 'epoch': 7.25}                                                                                             
+{'loss': 1.452, 'grad_norm': 7.484633445739746, 'learning_rate': 2.7232655190401668e-05, 'epoch': 7.28}                                                                                               
+{'loss': 1.5286, 'grad_norm': 13.250724792480469, 'learning_rate': 2.6971830985915492e-05, 'epoch': 7.3}                                                                                              
+ 73%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                        | 28000/38340 [19:29:59<6:57:44,  2.42s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5781, 'grad_norm': 0.00045037956442683935, 'learning_rate': 2.6711006781429316e-05, 'epoch': 7.33}                                                                                         
+{'loss': 1.6167, 'grad_norm': 9.812926292419434, 'learning_rate': 2.645018257694314e-05, 'epoch': 7.36}                                                                                               
+{'loss': 1.8154, 'grad_norm': 0.12451819330453873, 'learning_rate': 2.6189358372456967e-05, 'epoch': 7.38}                                                                                            
+{'loss': 1.5056, 'grad_norm': 8.7191162109375, 'learning_rate': 2.592853416797079e-05, 'epoch': 7.41}                                                                                                 
+{'loss': 1.6738, 'grad_norm': 13.611907958984375, 'learning_rate': 2.5667709963484615e-05, 'epoch': 7.43}                                                                                             
+ 74%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                      | 28500/38340 [19:50:22<6:40:21,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7405, 'grad_norm': 16.114479064941406, 'learning_rate': 2.540688575899844e-05, 'epoch': 7.46}                                                                                              
+{'loss': 1.8218, 'grad_norm': 3.2015953063964844, 'learning_rate': 2.5146061554512263e-05, 'epoch': 7.49}                                                                                             
+{'loss': 1.5352, 'grad_norm': 6.726024150848389, 'learning_rate': 2.4885237350026084e-05, 'epoch': 7.51}                                                                                              
+{'loss': 1.5389, 'grad_norm': 14.836390495300293, 'learning_rate': 2.4624413145539908e-05, 'epoch': 7.54}                                                                                             
+{'loss': 1.786, 'grad_norm': 0.0, 'learning_rate': 2.4363588941053732e-05, 'epoch': 7.56}                                                                                                             
+ 76%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                    | 29000/38340 [20:10:49<6:23:20,  2.46s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.7569, 'grad_norm': 4.586881637573242, 'learning_rate': 2.4102764736567553e-05, 'epoch': 7.59}                                                                                              
+{'loss': 1.6931, 'grad_norm': 2.697836399078369, 'learning_rate': 2.3841940532081377e-05, 'epoch': 7.62}                                                                                              
+{'loss': 1.5118, 'grad_norm': 35.53569030761719, 'learning_rate': 2.35811163275952e-05, 'epoch': 7.64}                                                                                                
+{'loss': 1.912, 'grad_norm': 1.958142876625061, 'learning_rate': 2.3320292123109025e-05, 'epoch': 7.67}                                                                                               
+{'loss': 1.2199, 'grad_norm': 8.2035493850708, 'learning_rate': 2.305946791862285e-05, 'epoch': 7.69}                                                                                                 
+ 77%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                  | 29500/38340 [20:31:17<6:00:58,  2.45s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5646, 'grad_norm': 0.17175954580307007, 'learning_rate': 2.2798643714136673e-05, 'epoch': 7.72}                                                                                            
+{'loss': 1.5583, 'grad_norm': 0.010343093425035477, 'learning_rate': 2.2537819509650497e-05, 'epoch': 7.75}                                                                                           
+{'loss': 1.5517, 'grad_norm': 6.698544025421143, 'learning_rate': 2.227699530516432e-05, 'epoch': 7.77}                                                                                               
+{'loss': 1.5937, 'grad_norm': 6.257116794586182, 'learning_rate': 2.201617110067814e-05, 'epoch': 7.8}                                                                                                
+{'loss': 1.6227, 'grad_norm': 65.90132904052734, 'learning_rate': 2.1755346896191965e-05, 'epoch': 7.82}                                                                                              
+ 78%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                | 30000/38340 [20:51:43<5:39:48,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6689, 'grad_norm': 2.779094934463501, 'learning_rate': 2.149452269170579e-05, 'epoch': 7.85}                                                                                               
+{'loss': 1.6624, 'grad_norm': 33.12380599975586, 'learning_rate': 2.1233698487219613e-05, 'epoch': 7.88}                                                                                              
+{'loss': 1.6219, 'grad_norm': 21.233346939086914, 'learning_rate': 2.0972874282733437e-05, 'epoch': 7.9}                                                                                              
+{'loss': 1.8854, 'grad_norm': 0.0, 'learning_rate': 2.071205007824726e-05, 'epoch': 7.93}                                                                                                             
+{'loss': 1.4379, 'grad_norm': 10.260522842407227, 'learning_rate': 2.045122587376109e-05, 'epoch': 7.96}                                                                                              
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                              | 30500/38340 [21:12:10<5:18:50,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5095, 'grad_norm': 0.2549296021461487, 'learning_rate': 2.019040166927491e-05, 'epoch': 7.98}                                                                                              
+ 80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                              | 30672/38340 [21:19:10<4:05:42,  1.92s/it]/home/taha/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 1.5791, 'grad_norm': 26.238117218017578, 'learning_rate': 1.9929577464788734e-05, 'epoch': 8.01}                                                                                             
+{'loss': 1.6342, 'grad_norm': 18.19416618347168, 'learning_rate': 1.9668753260302558e-05, 'epoch': 8.03}                                                                                              
+{'loss': 1.6043, 'grad_norm': 20.955297470092773, 'learning_rate': 1.940792905581638e-05, 'epoch': 8.06}                                                                                              
+{'loss': 1.5347, 'grad_norm': 8.534308433532715, 'learning_rate': 1.9147104851330206e-05, 'epoch': 8.09}                                                                                              
+ 81%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                            | 31000/38340 [21:32:38<5:02:30,  2.47s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5988, 'grad_norm': 25.284713745117188, 'learning_rate': 1.888628064684403e-05, 'epoch': 8.11}                                                                                              
+{'loss': 1.624, 'grad_norm': 0.054837532341480255, 'learning_rate': 1.8625456442357854e-05, 'epoch': 8.14}                                                                                            
+{'loss': 1.5634, 'grad_norm': 15.29450511932373, 'learning_rate': 1.8364632237871678e-05, 'epoch': 8.16}                                                                                              
+{'loss': 1.52, 'grad_norm': 5.015777587890625, 'learning_rate': 1.8103808033385498e-05, 'epoch': 8.19}                                                                                                
+{'loss': 1.6125, 'grad_norm': 0.00639709597453475, 'learning_rate': 1.7842983828899322e-05, 'epoch': 8.22}                                                                                            
+ 82%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                          | 31500/38340 [21:54:15<6:16:36,  3.30s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.8745, 'grad_norm': 90.01814270019531, 'learning_rate': 1.7582159624413146e-05, 'epoch': 8.24}                                                                                              
+{'loss': 1.6883, 'grad_norm': 0.001223831670358777, 'learning_rate': 1.732133541992697e-05, 'epoch': 8.27}                                                                                            
+{'loss': 1.4254, 'grad_norm': 6.499404430389404, 'learning_rate': 1.7060511215440794e-05, 'epoch': 8.29}                                                                                              
+{'loss': 1.5787, 'grad_norm': 15.720022201538086, 'learning_rate': 1.679968701095462e-05, 'epoch': 8.32}                                                                                              
+{'loss': 1.2463, 'grad_norm': 14.049972534179688, 'learning_rate': 1.6538862806468442e-05, 'epoch': 8.35}                                                                                             
+ 83%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                        | 32000/38340 [22:21:42<5:47:29,  3.29s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6125, 'grad_norm': 4.15062141418457, 'learning_rate': 1.6278038601982266e-05, 'epoch': 8.37}                                                                                               
+{'loss': 1.3842, 'grad_norm': 21.641279220581055, 'learning_rate': 1.6017214397496087e-05, 'epoch': 8.4}                                                                                              
+{'loss': 1.6255, 'grad_norm': 0.2128443419933319, 'learning_rate': 1.575639019300991e-05, 'epoch': 8.42}                                                                                              
+{'loss': 1.531, 'grad_norm': 10.158634185791016, 'learning_rate': 1.5495565988523735e-05, 'epoch': 8.45}                                                                                              
+{'loss': 1.6895, 'grad_norm': 23.659425735473633, 'learning_rate': 1.5234741784037559e-05, 'epoch': 8.48}                                                                                             
+ 85%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏                      | 32500/38340 [22:51:10<5:21:10,  3.30s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6525, 'grad_norm': 31.364675521850586, 'learning_rate': 1.4973917579551383e-05, 'epoch': 8.5}                                                                                              
+{'loss': 1.2206, 'grad_norm': 12.636253356933594, 'learning_rate': 1.4713093375065207e-05, 'epoch': 8.53}                                                                                             
+{'loss': 1.7814, 'grad_norm': 7.4749555587768555, 'learning_rate': 1.445226917057903e-05, 'epoch': 8.56}                                                                                              
+{'loss': 1.8144, 'grad_norm': 9.068220138549805, 'learning_rate': 1.4191444966092853e-05, 'epoch': 8.58}                                                                                              
+{'loss': 1.5992, 'grad_norm': 15.703896522521973, 'learning_rate': 1.3930620761606678e-05, 'epoch': 8.61}                                                                                             
+ 86%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                     | 33000/38340 [23:15:44<3:39:29,  2.47s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.4203, 'grad_norm': 8.621206283569336, 'learning_rate': 1.3669796557120502e-05, 'epoch': 8.63}                                                                                              
+{'loss': 1.1691, 'grad_norm': 8.525836944580078, 'learning_rate': 1.3408972352634326e-05, 'epoch': 8.66}                                                                                              
+{'loss': 1.5301, 'grad_norm': 2.0285263061523438, 'learning_rate': 1.3148148148148148e-05, 'epoch': 8.69}                                                                                             
+{'loss': 1.5226, 'grad_norm': 9.232372283935547, 'learning_rate': 1.2887323943661972e-05, 'epoch': 8.71}                                                                                              
+{'loss': 1.5116, 'grad_norm': 0.0, 'learning_rate': 1.2626499739175796e-05, 'epoch': 8.74}                                                                                                            
+ 87%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                   | 33500/38340 [23:36:27<3:18:27,  2.46s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6589, 'grad_norm': 5.47450590133667, 'learning_rate': 1.236567553468962e-05, 'epoch': 8.76}                                                                                                
+{'loss': 1.7506, 'grad_norm': 1.6016979217529297, 'learning_rate': 1.2104851330203444e-05, 'epoch': 8.79}                                                                                             
+{'loss': 1.4021, 'grad_norm': 18.236591339111328, 'learning_rate': 1.1844027125717268e-05, 'epoch': 8.82}                                                                                             
+{'loss': 1.4276, 'grad_norm': 10.048065185546875, 'learning_rate': 1.1583202921231092e-05, 'epoch': 8.84}                                                                                             
+{'loss': 1.7998, 'grad_norm': 30.087100982666016, 'learning_rate': 1.1322378716744914e-05, 'epoch': 8.87}                                                                                             
+ 89%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                 | 34000/38340 [23:57:11<2:58:06,  2.46s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6596, 'grad_norm': 4.627997398376465, 'learning_rate': 1.1061554512258738e-05, 'epoch': 8.89}                                                                                              
+{'loss': 1.4833, 'grad_norm': 5.953704833984375, 'learning_rate': 1.0800730307772562e-05, 'epoch': 8.92}                                                                                              
+{'loss': 1.3794, 'grad_norm': 0.04301699250936508, 'learning_rate': 1.0539906103286386e-05, 'epoch': 8.95}                                                                                            
+{'loss': 1.6162, 'grad_norm': 17.681900024414062, 'learning_rate': 1.0279081898800209e-05, 'epoch': 8.97}                                                                                             
+{'loss': 1.421, 'grad_norm': 35.44865417480469, 'learning_rate': 1.0018257694314033e-05, 'epoch': 9.0}                                                                                                
+ 90%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉               | 34500/38340 [24:17:49<2:38:18,  2.47s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+ 90%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████               | 34506/38340 [24:18:02<2:03:31,  1.93s/it]/home/taha/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py:668: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+{'loss': 1.5957, 'grad_norm': 4.705185890197754, 'learning_rate': 9.757433489827857e-06, 'epoch': 9.02}                                                                                               
+{'loss': 1.5488, 'grad_norm': 7.054503440856934, 'learning_rate': 9.49660928534168e-06, 'epoch': 9.05}                                                                                                
+{'loss': 1.5041, 'grad_norm': 10.819014549255371, 'learning_rate': 9.235785080855503e-06, 'epoch': 9.08}                                                                                              
+{'loss': 1.513, 'grad_norm': 19.558671951293945, 'learning_rate': 8.974960876369327e-06, 'epoch': 9.1}                                                                                                
+{'loss': 1.4266, 'grad_norm': 4.992519378662109, 'learning_rate': 8.714136671883151e-06, 'epoch': 9.13}                                                                                               
+ 91%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉             | 35000/38340 [24:38:12<2:15:27,  2.43s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.587, 'grad_norm': 6.599030494689941, 'learning_rate': 8.453312467396975e-06, 'epoch': 9.15}                                                                                                
+{'loss': 1.6885, 'grad_norm': 6.1104350090026855, 'learning_rate': 8.192488262910797e-06, 'epoch': 9.18}                                                                                              
+{'loss': 1.4649, 'grad_norm': 20.633153915405273, 'learning_rate': 7.931664058424622e-06, 'epoch': 9.21}                                                                                              
+{'loss': 1.325, 'grad_norm': 30.657657623291016, 'learning_rate': 7.670839853938446e-06, 'epoch': 9.23}                                                                                               
+{'loss': 1.8375, 'grad_norm': 16.669790267944336, 'learning_rate': 7.410015649452269e-06, 'epoch': 9.26}                                                                                              
+ 93%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉           | 35500/38340 [24:58:30<1:55:03,  2.43s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.4727, 'grad_norm': 5.4207000732421875, 'learning_rate': 7.149191444966093e-06, 'epoch': 9.29}                                                                                              
+{'loss': 1.6539, 'grad_norm': 72.72843170166016, 'learning_rate': 6.888367240479916e-06, 'epoch': 9.31}                                                                                               
+{'loss': 1.7384, 'grad_norm': 51.249427795410156, 'learning_rate': 6.62754303599374e-06, 'epoch': 9.34}                                                                                               
+{'loss': 1.7574, 'grad_norm': 0.0, 'learning_rate': 6.366718831507565e-06, 'epoch': 9.36}                                                                                                             
+{'loss': 1.5307, 'grad_norm': 18.07533073425293, 'learning_rate': 6.105894627021388e-06, 'epoch': 9.39}                                                                                               
+ 94%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊         | 36000/38340 [25:18:47<1:35:02,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5579, 'grad_norm': 0.014744682237505913, 'learning_rate': 5.845070422535211e-06, 'epoch': 9.42}                                                                                            
+{'loss': 1.3975, 'grad_norm': 0.2785322666168213, 'learning_rate': 5.584246218049035e-06, 'epoch': 9.44}                                                                                              
+{'loss': 1.5754, 'grad_norm': 10.546213150024414, 'learning_rate': 5.323422013562858e-06, 'epoch': 9.47}                                                                                              
+{'loss': 1.3136, 'grad_norm': 5.013076305389404, 'learning_rate': 5.062597809076682e-06, 'epoch': 9.49}                                                                                               
+{'loss': 1.7317, 'grad_norm': 7.3705153465271, 'learning_rate': 4.801773604590506e-06, 'epoch': 9.52}                                                                                                 
+ 95%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊       | 36500/38340 [25:39:02<1:14:51,  2.44s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.6911, 'grad_norm': 0.29138410091400146, 'learning_rate': 4.54094940010433e-06, 'epoch': 9.55}                                                                                              
+{'loss': 1.5458, 'grad_norm': 4.066911220550537, 'learning_rate': 4.2801251956181536e-06, 'epoch': 9.57}                                                                                              
+{'loss': 1.3163, 'grad_norm': 6.900385856628418, 'learning_rate': 4.0193009911319776e-06, 'epoch': 9.6}                                                                                               
+{'loss': 1.545, 'grad_norm': 17.957090377807617, 'learning_rate': 3.7584767866458007e-06, 'epoch': 9.62}                                                                                              
+{'loss': 1.5199, 'grad_norm': 6.279475688934326, 'learning_rate': 3.4976525821596243e-06, 'epoch': 9.65}                                                                                              
+ 97%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋     | 37000/38340 [25:59:15<54:05,  2.42s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.3349, 'grad_norm': 10.287919044494629, 'learning_rate': 3.2368283776734484e-06, 'epoch': 9.68}                                                                                             
+{'loss': 1.6427, 'grad_norm': 18.651453018188477, 'learning_rate': 2.976004173187272e-06, 'epoch': 9.7}                                                                                               
+{'loss': 1.6367, 'grad_norm': 22.524564743041992, 'learning_rate': 2.7151799687010956e-06, 'epoch': 9.73}                                                                                             
+{'loss': 1.5649, 'grad_norm': 0.00483517674729228, 'learning_rate': 2.454355764214919e-06, 'epoch': 9.75}                                                                                             
+{'loss': 2.1018, 'grad_norm': 20.20415496826172, 'learning_rate': 2.1935315597287428e-06, 'epoch': 9.78}                                                                                              
+ 98%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋   | 37500/38340 [26:19:28<33:55,  2.42s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.8156, 'grad_norm': 10.800024032592773, 'learning_rate': 1.9327073552425663e-06, 'epoch': 9.81}                                                                                             
+{'loss': 1.4373, 'grad_norm': 0.0006317021325230598, 'learning_rate': 1.6718831507563902e-06, 'epoch': 9.83}                                                                                          
+{'loss': 1.282, 'grad_norm': 9.522575378417969, 'learning_rate': 1.411058946270214e-06, 'epoch': 9.86}                                                                                                
+{'loss': 1.4657, 'grad_norm': 6.052868843078613, 'learning_rate': 1.1502347417840378e-06, 'epoch': 9.89}                                                                                              
+{'loss': 1.4689, 'grad_norm': 18.337081909179688, 'learning_rate': 8.894105372978613e-07, 'epoch': 9.91}                                                                                              
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋ | 38000/38340 [26:39:41<13:43,  2.42s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'loss': 1.5009, 'grad_norm': 0.0012351926416158676, 'learning_rate': 6.28586332811685e-07, 'epoch': 9.94}                                                                                            
+{'loss': 1.4814, 'grad_norm': 29.334545135498047, 'learning_rate': 3.677621283255086e-07, 'epoch': 9.96}                                                                                              
+{'loss': 1.4342, 'grad_norm': 9.749007225036621, 'learning_rate': 1.069379238393323e-07, 'epoch': 9.99}                                                                                               
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 38340/38340 [26:53:24<00:00,  1.89s/it]/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+{'train_runtime': 96804.2905, 'train_samples_per_second': 1.584, 'train_steps_per_second': 0.396, 'train_loss': 1.7115610159494383, 'epoch': 10.0}                                                    
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 38340/38340 [26:53:24<00:00,  2.52s/it]
+[info] Saving LoRA adapters + tokenizer to TrainedModels/qbert-lora
+/home/taha/.local/lib/python3.10/site-packages/peft/utils/save_and_load.py:295: UserWarning: Could not find a config file in bert-base-uncased - will assume that the vocabulary was not modified.
+  warnings.warn(
+[success] Training finished.
