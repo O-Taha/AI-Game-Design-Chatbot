@@ -4,6 +4,8 @@ import faiss
 from collections import OrderedDict
 import numpy as np
 import yaml
+import json
+
 
 def read_yaml_file(file_path):
     """
@@ -115,5 +117,5 @@ def load_mechanics(mechanics_dir='.'):
 if __name__ == "__main__":
     mechanics = load_mechanics("./mechanics")
     print(f"{len(mechanics)} mécaniques trouvées.\n")
-    for mech in mechanics[:2]:
-        pprint.pprint(mech)
+    for mech in mechanics[:]:
+        print(json.dumps(mech))

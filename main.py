@@ -43,7 +43,3 @@ if __name__ == "__main__":
     for mech, score in results_sorted:
         print(f"🧩 {mech['name']} ({mech['category']}) - Score: {score:.4f}")
         print(f"   → Solved Problems: {mech['solved_problems']}\n")
-
-# Retester un entrainement classique avec max. 3 epochs pour voir si la loss est plus régulière
-# Si oui, le problème vient du LoRA, essayer d'augmenter la taille de sa couche
-# Tracer les loss

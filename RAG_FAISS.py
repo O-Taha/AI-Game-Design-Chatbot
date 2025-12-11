@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import List, Tuple
 import hashlib
 
-from text_embedding import text_embedding, MODEL_NAME, FINE_TUNED_MODEL
+from text_embedding import text_embedding, FINE_TUNED_MODEL
 
 # --- gestion des dossiers ---
 os.makedirs('RAGIndex', exist_ok=True)
