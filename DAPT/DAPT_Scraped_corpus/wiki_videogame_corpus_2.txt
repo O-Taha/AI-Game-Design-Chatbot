@@ -2014,7 +2014,7 @@ zoning:
 === Platform games ===:
     Platform games, or platformers, have gameplay primarily centered around jumping and climbing to navigate the player's environment. They may have enemies or obstacles to avoid and fight or may just be pure jumping puzzles. Generally the playable characters in a platform game are able to jump many times their own height and the player is offered some control over their movement in midair as well as the height and distance of their jumps. Settings tend to be vertically exaggerated with much uneven terrain that the player can leap up to or fall off of. Donkey Kong (1981) was one of the earliest and best-known platformers. The American gaming press classified it using the term climbing game at the time. Super Mario Bros. (1985), a platformer, was one of the best-selling games of all time, with more than 40 million copies sold.
 
-=== Shooter games ===:
+=== <Shooter> games ===:
     In shooter games, or simply shooters, players use ranged weapons to participate in the action, which takes place at a distance. Most shooters involve violent gameplay. Lethal weaponry is used to damage opponents. However, some shooters, such as Splatoon, have non-violent objectives. Shooters, aside from subgenre classifications, can be further classified by their perspective of play.
 
 ==== First-person shooters ====:
