@@ -99,13 +99,13 @@ def load_mechanics(mechanics_dir='.'):
                 category = yaml_file.parent.parent.name
 
                 mech_dict = OrderedDict([
-                    ('name', process_field(mechanic.get('name', ''))),
+                    ('name', mechanic.get('name', '')),
                     ('symbol', symbol),
                     ('category', category),
-                    ('short_description', process_field(mechanic.get('short_description', ''))),
-                    ('long_description', process_field(mechanic.get('long_description', ''))),
-                    ('examples', process_field(mechanic.get('examples', []))),
-                    ('solved_problems', process_field(mechanic.get('solved_problems', '')))
+                    ('short_description', mechanic.get('short_description', '')),
+                    ('long_description', mechanic.get('long_description', '')),
+                    ('examples', mechanic.get('examples', [])),
+                    ('solved_problems', mechanic.get('solved_problems', ''))
                 ])
 
                 mechanics_data.append(mech_dict)
@@ -118,4 +118,4 @@ if __name__ == "__main__":
     mechanics = load_mechanics("./mechanics")
     print(f"{len(mechanics)} mécaniques trouvées.\n")
     for mech in mechanics[:]:
-        print(json.dumps(mech))
+        print(mech)

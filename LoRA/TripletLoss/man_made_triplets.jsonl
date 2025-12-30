@@ -1,0 +1,419 @@
+{"anchor": "What mechanic add realism to my survival game?", "positive": "Day-Night Cycle", "negatives": ["Cover Shooting", "Zoning", "Touch Input", "Dash", "Double Jump"]}
+{"anchor": "How can I make my game world feel more immersive and realistic?", "positive": "Day-Night Cycle", "negatives": ["Asset Import", "Spectator Mode", "Matchmaking", "Co-op Play", "Inventory Management"]}
+{"anchor": "My farming sim features a clock system but I feel like it's missing something...", "positive": "Day-Night Cycle", "negatives": ["Combo Input", "Friend Lists", "In-Game Chat", "Quick Time Event", "Block"]}
+
+{"anchor": "I'm making a platformer but the levels are boring.", "positive": "Environmental Hazards", "negatives": ["Asset Import", "Base Building", "Combo Input", "Zoning", "Branching Dialogue"]}
+{"anchor": "What mechanic would solve uninteresting traversal?", "positive": "Environmental Hazards", "negatives": ["Cover System", "Friend Lists", "Social Hubs", "Open World Map", "Non-linear Story"]}
+{"anchor": "Why is my Action game too monotonous?", "positive": "Environmental Hazards", "negatives": ["In-Game Currency", "Voice Commands", "Spectator Mode", "Workshop Integration", "Motion Controls"]}
+
+{"anchor": "How can I make my world feel more immersive?", "positive": "Weather Systems", "negatives": ["Minimap", "Free Camera", "Quick Time Event", "Recipe System", "Wall Run"]}
+{"anchor": "I'm making a stealth game but the levels are too repetitive.", "positive": "Weather Systems", "negatives": ["Social Hubs", "Asset Import", "Customization", "Inventory Management", "Leveling Up"]}
+{"anchor": "What can I add to my farming sim game?", "positive": "Weather Systems", "negatives": ["HUD", "Realistic Collision", "Wall Run", "Lore Collection", "Gravity Manipulation"]}
+
+{"anchor": "My NPCs are too robotic, how can I make their behaviour more realistic and immersive ?", "positive": "Dynamic Ecosystem", "negatives": ["Quick Time Combat", "Economy Balancing", "Microtransactions", "Regeneration", "Gravity Manipulation"]}
+{"anchor": "I'm making a platformer but the ennemies are too predictable.", "positive": "Dynamic Ecosystem", "negatives": ["Blueprints", "Matchmaking", "Radial Menus", "First-Person View", "Touch Input"]}
+{"anchor": "How can I make my open world game more realistic?", "positive": "Dynamic Ecosystem", "negatives": ["In-Game Chat", "Lock-On", "Voice Commands", "Free Camera", "Spectator Mode"]}
+
+{"anchor": "Players feel like the world of my game is too empty.", "positive": "Open World Map", "negatives": ["Dodge", "Contextual Prompts", "Bullet Time", "Block", "Charge Attack"]}
+{"anchor": "What could help players getting lost?", "positive": "Open World Map", "negatives": ["Modular Construction", "Inventory Management", "Charge Attack", "Voice Commands", "Ambient Audio"]}
+{"anchor": "How can I make my Open world game more interesting?", "positive": "Open World Map", "negatives": ["Economy Balancing", "Zoning", "Supply and Demand", "Gesture Recognition", "Microtransactions"]}
+
+{"anchor": "How can I easily animate a swarm of entities in my game?", "positive": "Flocking", "negatives": ["Block", "Day-Night Cycle", "Minimap", "Unlockables", "In-Game Chat"]}
+{"anchor": "How can I make my ennemies behave more realistically?", "positive": "Flocking", "negatives": ["Dash", "Rage Mode", "Glide", "Spectator Mode", "Workshop Integration"]}
+{"anchor": "How can I optimize a big number of ennemies?", "positive": "Flocking", "negatives": ["Skill Trees", "Blueprints", "User-Generated Content", "Gesture Recognition", "Cover System"]}
+
+{"anchor": "I'm making a top down game but I can't make an AI that can navigate through the world.", "positive": "Pathfinding", "negatives": ["Destructible Environments", "Social Hubs", "Workshop Integration", "Modular Crafting", "Block"]}
+{"anchor": "How can I make my NPCs follow the player?", "positive": "Pathfinding", "negatives": ["Non-linear Story", "Quick Time Combat", "Motion Controls", "Fast Travel", "Inventory Management"]}
+{"anchor": "What can I add to make my entities more dynamic?", "positive": "Pathfinding", "negatives": ["Minimap", "Glide", "Bullet Time", "Regeneration", "Dynamic Tooltips"]}
+
+{"anchor": "I'm making a stealth game, but the ennemies are too hard.", "positive": "Perception", "negatives": ["Social Hubs", "Secret Areas", "Resource Gathering", "Lore Collection", "Motion Controls"]}
+{"anchor": "What mechanic would solve the problem of an AI that always knows the player's location?", "positive": "Perception", "negatives": ["Player Trading", "Trade System", "Bullet Time", "Parry", "Resource Gathering"]}
+{"anchor": "How can I make my entities more believable?", "positive": "Perception", "negatives": ["Voice Commands", "Parry", "Dodge", "Dice Roll", "Workshop Integration"]}
+
+{"anchor": "What mechanic would solve the problem of shooters devolving into static run-and-gun scenarios?", "positive": "Cover System", "negatives": ["Wall Run", "Dynamic Ecosystem", "User-Generated Content", "Matchmaking", "Fast Travel"]}
+{"anchor": "I'm making an FPS but the combat feels too boring", "positive": "Cover System", "negatives": ["In-Game Currency", "Open World", "First-Person View", "Contextual Prompts", "In-Game Chat"]}
+{"anchor": "I'm making a shooter but fights feel random and luck-based.", "positive": "Cover System", "negatives": ["Microtransactions", "Regeneration", "Dynamic Ecosystem", "Day-Night Cycle", "Destructible Environments"]}
+
+{"anchor": "How can I make my game adapt to the player's skill?", "positive": "Adaptive AI", "negatives": ["Fast Travel", "Dodge", "Cover System", "Unlockables", "Fluid Dynamics"]}
+{"anchor": "Some players feel my game is too easy while others feel my game is too hard.", "positive": "Adaptive AI", "negatives": ["Secret Areas", "Dodge", "PvP", "In-Game Currency", "Random Events"]}
+{"anchor": "How can I make my game fun on repeated playthroughs?", "positive": "Adaptive AI", "negatives": ["Invisibility", "Interact", "Dash", "Contextual Prompts", "Workshop Integration"]}
+
+{"anchor": "I'm making an Action game with fighting mechanics but the combat feels repetitive.", "positive": "Counter Attack", "negatives": ["Dynamic Music", "Gesture Recognition", "Environmental Storytelling", "Interact", "Minimap"]}
+{"anchor": "How can I add depth to my fighting game?", "positive": "Counter Attack", "negatives": ["Voice Input", "Friend Lists", "First-Person View", "Defensive Fortification", "Flocking"]}
+{"anchor": "What mechanic could I add to my combat system?", "positive": "Counter Attack", "negatives": ["Resource Combination", "Radial Menus", "Dynamic Tooltips", "Lore Collection", "Weather Systems"]}
+
+{"anchor": "My combat system feels too boring.", "positive": "Charge Attack", "negatives": ["Crafting Materials", "Branching Dialogue", "Weather Systems", "Gesture Recognition", "PvP"]}
+{"anchor": "Players of my fighting game are only button-mashing which make the game repetitive.", "positive": "Charge Attack", "negatives": ["Radial Menus", "Zoning", "HUD", "Interact", "Cinematic Camera"]}
+{"anchor": "What's a more interesting mechanic I could add to my fighting game?", "positive": "Charge Attack", "negatives": ["Flocking", "Positional Audio", "Resource Gathering", "Economy Balancing", "Dialogue Wheel"]}
+
+{"anchor": "How can I make my fighting game more interesting?", "positive": "Combo System", "negatives": ["Trade System", "Fast Travel", "Block", "HUD", "Open World"]}
+{"anchor": "What can I add to the combat of my action game?", "positive": "Combo System", "negatives": ["Environmental Storytelling", "Minimap", "User-Generated Content", "Dynamic Tooltips", "Friend Lists"]}
+{"anchor": "The combat system of my game is too simple.", "positive": "Combo System", "negatives": ["Pathfinding", "Dynamic Ecosystem", "Fluid Dynamics", "Secret Areas", "Weather Systems"]}
+
+{"anchor": "I'm making an RPG but the combat system is too static.", "positive": "Quick Time Combat", "negatives": ["Base Building", "Voice Input", "Social Hubs", "Guild Systems", "Contextual Prompts"]}
+{"anchor": "How can I make the fights in my game more cinematic and visually impressive?", "positive": "Quick Time Combat", "negatives": ["Secret Areas", "Resource Gathering", "Lore Collection", "Script Extensibility", "Day-Night Cycle"]}
+{"anchor": "I'm making an adventure game but levels are too boring.", "positive": "Quick Time Combat", "negatives": ["Fluid Dynamics", "Resource Combination", "Matchmaking", "Modular Construction", "Trade System"]}
+
+{"anchor": "How can I foster a community around my game?", "positive": "Customization Tools", "negatives": ["Teleport", "Weather Systems", "Adaptive Soundtrack", "Pathfinding", "Lock-On"]}
+{"anchor": "What could attract modders to my game?", "positive": "Customization Tools", "negatives": ["Radial Menus", "Leveling Up", "Invisibility", "Dice Roll", "Economy Balancing"]}
+{"anchor": "I'm making a sandbox game and I want players to be able to create their own content.", "positive": "Customization Tools", "negatives": ["Cinematic Camera", "Leveling Up", "Open World", "Voice Input", "Cover System"]}
+
+{"anchor": "How can I help modding in my game?", "positive": "Workshop Integration", "negatives": ["Block", "Realistic Collision", "Secret Areas", "Quick Time Event", "Wall Run"]}
+{"anchor": "What could make modding easier?", "positive": "Workshop Integration", "negatives": ["Auction House", "Block", "Co-op Play", "Cover Shooting", "Teleport"]}
+{"anchor": "I want to develop modding around my game community.", "positive": "Workshop Integration", "negatives": ["Leveling Up", "Voice Input", "Positional Audio", "Base Building", "Over-the-Shoulder"]}
+
+{"anchor": "How could I provide endless everlasting content to users?", "positive": "Asset Import", "negatives": ["Destructible Environments", "Quick Time Combat", "Regeneration", "Critical Hits", "Gesture Recognition"]}
+{"anchor": "What could make modding easier in my game?", "positive": "Asset Import", "negatives": ["Non-linear Story", "Resource Combination", "Ambient Audio", "Co-op Play", "In-Game Chat"]}
+{"anchor": "How can I foster creativity and customization?", "positive": "Asset Import", "negatives": ["Spectator Mode", "Loot Drops", "Glide", "Environmental Hazards", "Guild Systems"]}
+
+{"anchor": "How can I encourage creativity and customization?", "positive": "Script Extensibility", "negatives": ["Minimap", "Cinematic Camera", "Voice Chat", "Matchmaking", "Parry"]}
+{"anchor": "I want players to mod my game.", "positive": "Script Extensibility", "negatives": ["Combo Input", "Resource Gathering", "Minimap", "Weather Systems", "Invisibility"]}
+{"anchor": "I am making a sandbox game and I want the community to have better access to modding tools", "positive": "Script Extensibility", "negatives": ["Dynamic Music", "Lore Collection", "Modular Crafting", "Flocking", "Friend Lists"]}
+
+{"anchor": "How could I provide endless everlasting content to users?", "positive": "User-Generated Content", "negatives": ["Auction House", "Combo System", "Teleport", "Dodge", "Environmental Hazards"]}
+{"anchor": "How can I involve the users in the creation of my game?", "positive": "User-Generated Content", "negatives": ["Fluid Dynamics", "Resource Gathering", "Realistic Collision", "Combo Input", "Gravity Manipulation"]}
+{"anchor": "I can't make enough content for my game.", "positive": "User-Generated Content", "negatives": ["Gravity Manipulation", "Social Hubs", "Perception", "Bullet Time", "Block"]}
+
+{"anchor": "What mechanic solves the problem of players constantly finding new gear that makes their favorite items obsolete?", "positive": "Upgrade Resources", "negatives": ["Contextual Prompts", "Realistic Collision", "Crafting Materials", "Inventory Management", "Rage Mode"]}
+{"anchor": "I'm making an RPG. Players don't like the fact that they have to throw away their old gear for newer one.", "positive": "Upgrade Resources", "negatives": ["Environmental Hazards", "Dialogue Wheel", "Block", "Motion Controls", "Script Extensibility"]}
+{"anchor": "How can I make my RPG loot system more original?", "positive": "Upgrade Resources", "negatives": ["Adaptive Soundtrack", "Modular Construction", "Combo System", "Dash", "Voice Chat"]}
+
+{"anchor": "How can I encourage exploration in my metroidvania?", "positive": "Crafting Materials", "negatives": ["Social Hubs", "PvP", "Interact", "Counter Attack", "Motion Controls"]}
+{"anchor": "What could make my open world game more interesting?", "positive": "Crafting Materials", "negatives": ["Gesture Recognition", "Matchmaking", "User-Generated Content", "Spectator Mode", "In-Game Chat"]}
+{"anchor": "Players find my RPG items too boring...", "positive": "Crafting Materials", "negatives": ["Over-the-Shoulder", "Ambient Audio", "Glide", "Cover System", "Ragdoll Physics"]}
+
+{"anchor": "How can I link player progress to world exploration?", "positive": "Resource Gathering", "negatives": ["Gesture Recognition", "Matchmaking", "Trade System", "PvP", "Minimap"]}
+{"anchor": "How can I reward exploration in my RPG?", "positive": "Resource Gathering", "negatives": ["In-Game Chat", "Dynamic Music", "Quick Time Combat", "Upgrading", "Matchmaking"]}
+{"anchor": "My open world game feels too empty.", "positive": "Resource Gathering", "negatives": ["Invisibility", "Quick Time Combat", "Free Camera", "Bullet Time", "Matchmaking"]}
+
+{"anchor": "Players find my RPG too easy...", "positive": "Economy Balancing", "negatives": ["Block", "Customization", "Dodge", "Counter Attack", "HUD"]}
+{"anchor": "How can I balance the difficulty of my mobile game?", "positive": "Economy Balancing", "negatives": ["Block", "Voice Chat", "Contextual Prompts", "Bullet Time", "Spectator Mode"]}
+{"anchor": "How can I improve my shop system?", "positive": "Economy Balancing", "negatives": ["Rage Mode", "Base Building", "Dynamic Ecosystem", "Zoning", "Teleport"]}
+
+{"anchor": "My survival game is too boring", "positive": "Inventory Management", "negatives": ["Motion Controls", "Supply and Demand", "Touch Input", "Matchmaking", "HUD"]}
+{"anchor": "What could make my action game more original?", "positive": "Inventory Management", "negatives": ["Economy Balancing", "Microtransactions", "HUD", "Zoning", "Minimap"]}
+{"anchor": "Why is my RPG too easy?", "positive": "Inventory Management", "negatives": ["Perception", "Motion Controls", "PvP", "Blueprints", "Matchmaking"]}
+
+{"anchor": "What online mechanics could I add?", "positive": "Social Hubs", "negatives": ["Rage Mode", "Adaptive AI", "Cover Shooting", "Script Extensibility", "Inventory Management"]}
+{"anchor": "How can I make my MMO feel lived in?", "positive": "Social Hubs", "negatives": ["Gesture Recognition", "Contextual Prompts", "Positional Audio", "Map Expansion", "Perception"]}
+{"anchor": "What could encourage friendships in my online game?", "positive": "Social Hubs", "negatives": ["Quick Time Combat", "Flocking", "Invisibility", "Crafting Materials", "Inventory Management"]}
+
+{"anchor": "My online game lacks co-op between players.", "positive": "In-Game Chat", "negatives": ["Workshop Integration", "Upgrading", "Voice Input", "First-Person View", "Open World Map"]}
+{"anchor": "How can I improve communication in my multiplayer game?", "positive": "In-Game Chat", "negatives": ["First-Person View", "Critical Hits", "Quick Time Event", "PvP", "Loot Drops"]}
+{"anchor": "What could allow for communication between players?", "positive": "In-Game Chat", "negatives": ["Motion Controls", "Lock-On", "Cover Shooting", "Zoning", "Ragdoll Physics"]}
+
+{"anchor": "What interaction other than combat could I add to my MMO?", "positive": "Player Trading", "negatives": ["Zoning", "Ragdoll Physics", "Invisibility", "HUD", "Touch Input"]}
+{"anchor": "How could I reduce toxicity in my multiplayer online game?", "positive": "Player Trading", "negatives": ["Procedural Generation", "PvP", "Recipe System", "Counter Attack", "Microtransactions"]}
+{"anchor": "What could encourage player collaboration in multiplayer?", "positive": "Player Trading", "negatives": ["Combo System", "Unlockables", "First-Person View", "Adaptive Soundtrack", "Counter Attack"]}
+
+{"anchor": "What could encourage player collaboration in my mobile game?", "positive": "Guild Systems", "negatives": ["Positional Audio", "Counter Attack", "Free Camera", "Wall Run", "Procedural Generation"]}
+{"anchor": "Players aren't collaborating enough in my MMO.", "positive": "Guild Systems", "negatives": ["Voice Input", "Teleport", "Upgrading", "Over-the-Shoulder", "Zoning"]}
+{"anchor": "How could I create friendships in my online game?", "positive": "Guild Systems", "negatives": ["Cover System", "Flocking", "Dynamic Tooltips", "Critical Hits", "Ambient Audio"]}
+
+{"anchor": "How could I create friendships in my online game?", "positive": "Friend Lists", "negatives": ["Lock-On", "Motion Controls", "Upgrade Resources", "Regeneration", "Resource Gathering"]}
+{"anchor": "Players can't form long-term relationships in my online game.", "positive": "Friend Lists", "negatives": ["Regeneration", "Map Expansion", "Ragdoll Physics", "Touch Input", "Critical Hits"]}
+{"anchor": "What mechanic could help me foster a community around my MMO?", "positive": "Friend Lists", "negatives": ["Block", "Branching Dialogue", "Upgrade Resources", "Inventory Management", "Day-Night Cycle"]}
+
+{"anchor": "Players are getting lost in my open world game.", "positive": "Map Expansion", "negatives": ["Co-op Play", "Cover System", "Dynamic Ecosystem", "Inventory Management", "Dice Roll"]}
+{"anchor": "How can I guide players through my open world.", "positive": "Map Expansion", "negatives": ["User-Generated Content", "Free Camera", "Counter Attack", "Modular Crafting", "Fluid Dynamics"]}
+{"anchor": "What mechanic could improve exploration in my open world?", "positive": "Map Expansion", "negatives": ["Motion Controls", "Quick Time Event", "Weather Systems", "Quick Time Combat", "PvP"]}
+
+{"anchor": "Exploration is too slow and boring in my metroidvania.", "positive": "Fast Travel", "negatives": ["Recipe System", "Matchmaking", "Destructible Environments", "Supply and Demand", "Perception"]}
+{"anchor": "My open world is too large and empty.", "positive": "Fast Travel", "negatives": ["Dynamic Tooltips", "Procedural Generation", "Parry", "Auction House", "Economy Balancing"]}
+{"anchor": "My world is too large. How could I improve pacing in my adventure game?", "positive": "Fast Travel", "negatives": ["Dynamic Tooltips", "Quick Time Combat", "Gravity Manipulation", "Guild Systems", "Secret Areas"]}
+
+{"anchor": "What genre or mechanic would make my game less linear and more replayable?", "positive": "Open World", "negatives": ["Dodge", "Positional Audio", "Environmental Hazards", "Cover Shooting", "HUD"]}
+{"anchor": "What twist could I add to my game to make it more original?", "positive": "Open World", "negatives": ["Environmental Hazards", "Cover Shooting", "Parry", "In-Game Chat", "Shield"]}
+{"anchor": "How can I make an experience different for each player?", "positive": "Open World", "negatives": ["Experience Points", "Asset Import", "Quick Time Combat", "Player Trading", "Motion Controls"]}
+
+{"anchor": "My open world feels too empty...", "positive": "Discovery", "negatives": ["Glide", "Perk System", "Weather Systems", "Motion Controls", "Perception"]}
+{"anchor": "How can I make my open world game more interesting?", "positive": "Discovery", "negatives": ["Open World", "Interact", "Combo System", "Ragdoll Physics", "First-Person View"]}
+{"anchor": "Players are bored with the exploration of my open world game.", "positive": "Discovery", "negatives": ["Player Trading", "Co-op Play", "Voice Input", "Touch Input", "Day-Night Cycle"]}
+
+{"anchor": "What could make exploration more fun in my metroidvania?", "positive": "Secret Areas", "negatives": ["Ambient Audio", "Invisibility", "Flocking", "Destructible Environments", "HUD"]}
+{"anchor": "What can I add to my map to make exploration more fun?", "positive": "Secret Areas", "negatives": ["Realistic Collision", "Economy Balancing", "Invisibility", "Quick Time Event", "Defensive Fortification"]}
+{"anchor": "Players are all taking the same path in my adventure game.", "positive": "Secret Areas", "negatives": ["Guild Systems", "Upgrading", "Quick Time Event", "HUD", "PvP"]}
+
+{"anchor": "What mechanic could improve the combat system of my game?", "positive": "Parry", "negatives": ["Dialogue Wheel", "Branching Dialogue", "Gravity Manipulation", "Dynamic Tooltips", "Positional Audio"]}
+{"anchor": "How can I make my fighting game more fun?", "positive": "Parry", "negatives": ["Modular Crafting", "Over-the-Shoulder", "Modular Construction", "PvP", "Fluid Dynamics"]}
+{"anchor": "My 2D fighter is too simple...", "positive": "Parry", "negatives": ["Voice Input", "Base Building", "Open World", "Motion Controls", "Asset Import"]}
+
+{"anchor": "Which mechanic could add depth to my combat system?", "positive": "Block", "negatives": ["Non-linear Story", "Interact", "Flocking", "Crafting Materials", "Gesture Recognition"]}
+{"anchor": "My action game's combat system is too simple.", "positive": "Block", "negatives": ["Weather Systems", "Fast Travel", "Environmental Storytelling", "Asset Import", "Branching Dialogue"]}
+{"anchor": "What mechanic could improve my fighting game?", "positive": "Block", "negatives": ["Gesture Recognition", "Fluid Dynamics", "Secret Areas", "Touch Input", "Over-the-Shoulder"]}
+
+{"anchor": "My RPG feels too boring.", "positive": "Interact", "negatives": ["Spectator Mode", "Defensive Fortification", "Motion Controls", "Trade System", "Guild Systems"]}
+{"anchor": "Players are not exploring the world enough.", "positive": "Interact", "negatives": ["Cover System", "Glide", "Dynamic Ecosystem", "Procedural Generation", "Day-Night Cycle"]}
+{"anchor": "How could I create a believable adventure game world?", "positive": "Interact", "negatives": ["Glide", "User-Generated Content", "Shield", "Dash", "Invisibility"]}
+
+{"anchor": "Fights in my game feel too static and one-dimensional.", "positive": "Dodge", "negatives": ["Dialogue Wheel", "Motion Controls", "HUD", "Non-linear Story", "In-Game Chat"]}
+{"anchor": "I'm making a 3D action game. What could improve the flow of fights?", "positive": "Dodge", "negatives": ["Trade System", "Dynamic Tooltips", "First-Person View", "Procedural Generation", "Motion Controls"]}
+{"anchor": "What mechanic could my fighting game lack?", "positive": "Dodge", "negatives": ["Map Expansion", "Crafting Materials", "Workshop Integration", "Open World", "Supply and Demand"]}
+
+{"anchor": "What's the main mechanic I could base my sandbox game around?", "positive": "Ragdoll Physics", "negatives": ["HUD", "In-Game Chat", "Flocking", "Zoning", "Microtransactions"]}
+{"anchor": "Players think my game lacks personality and originality?", "positive": "Ragdoll Physics", "negatives": ["PvP", "In-Game Currency", "Contextual Prompts", "In-Game Chat", "Shield"]}
+{"anchor": "What could make my platformer less predictable?", "positive": "Ragdoll Physics", "negatives": ["HUD", "Open World", "Combo System", "Player Trading", "Supply and Demand"]}
+
+{"anchor": "My open world game doesn't feel cinematic enough.", "positive": "Realistic Collision", "negatives": ["Random Events", "HUD", "Open World", "Trade System", "Customization"]}
+{"anchor": "My action adventure game lacks realism.", "positive": "Realistic Collision", "negatives": ["Resource Combination", "Glide", "Secret Areas", "Social Hubs", "Open World"]}
+{"anchor": "How could I improve my action sequences?", "positive": "Realistic Collision", "negatives": ["Customization Tools", "Voice Chat", "Economy Balancing", "Fast Travel", "Friend Lists"]}
+
+{"anchor": "What could improve interactivity in my puzzle game?", "positive": "Fluid Dynamics", "negatives": ["Player Trading", "Weather Systems", "Upgrading", "User-Generated Content", "HUD"]}
+{"anchor": "I'm making an immersive sim. What could improve its impredictability and dynamism?", "positive": "Fluid Dynamics", "negatives": ["Dialogue Wheel", "Crafting Materials", "Map Expansion", "Lore Collection", "In-Game Chat"]}
+{"anchor": "What mechanic could add realism to my game?", "positive": "Fluid Dynamics", "negatives": ["Dash", "Critical Hits", "Trade System", "Asset Import", "Teleport"]}
+
+{"anchor": "What mechanic could make my platformer more original?", "positive": "Gravity Manipulation", "negatives": ["Open World", "Fast Travel", "Economy Balancing", "In-Game Chat", "Friend Lists"]}
+{"anchor": "What mechanic could improve my puzzle game?", "positive": "Gravity Manipulation", "negatives": ["First-Person View", "Gesture Recognition", "Loot Drops", "Bullet Time", "Guild Systems"]}
+{"anchor": "What could be my action game's main mechanic?", "positive": "Gravity Manipulation", "negatives": ["Shield", "Fast Travel", "Radial Menus", "Script Extensibility", "Regeneration"]}
+
+{"anchor": "What could make my fighting game more fun?", "positive": "Destructible Environments", "negatives": ["Blueprints", "Pathfinding", "Weather Systems", "HUD", "Zoning"]}
+{"anchor": "How can I make my action game more immersive?", "positive": "Destructible Environments", "negatives": ["Friend Lists", "Upgrading", "Wall Run", "Experience Points", "Glide"]}
+{"anchor": "Players are bored by my shooting system.", "positive": "Destructible Environments", "negatives": ["Open World Map", "Regeneration", "Minimap", "Auction House", "Microtransactions"]}
+
+{"anchor": "I'm making a crafting system but players can't remember how to craft items.", "positive": "Recipe System", "negatives": ["Upgrading", "Workshop Integration", "First-Person View", "Discovery", "Script Extensibility"]}
+{"anchor": "My craft system lacks something.", "positive": "Recipe System", "negatives": ["Defensive Fortification", "Touch Input", "PvP", "Branching Dialogue", "Matchmaking"]}
+{"anchor": "What could improve my crafting system?", "positive": "Recipe System", "negatives": ["Dice Roll", "Positional Audio", "Teleport", "Fast Travel", "Dodge"]}
+
+{"anchor": "My crafting system is too boring.", "positive": "Modular Crafting", "negatives": ["Destructible Environments", "Voice Chat", "Day-Night Cycle", "Parry", "Lock-On"]}
+{"anchor": "How can I make my shooter more original?", "positive": "Modular Crafting", "negatives": ["Cinematic Camera", "HUD", "In-Game Currency", "Minimap", "First-Person View"]}
+{"anchor": "My survival game is too repetitive.", "positive": "Modular Crafting", "negatives": ["Spectator Mode", "Touch Input", "Cinematic Camera", "Guild Systems", "Voice Commands"]}
+
+{"anchor": "How can I improve items in my open world game?", "positive": "Customization", "negatives": ["Map Expansion", "Dash", "Random Events", "Adaptive Soundtrack", "Dice Roll"]}
+{"anchor": "Players find my items too boring.", "positive": "Customization", "negatives": ["Ambient Audio", "Invisibility", "Radial Menus", "Block", "Flocking"]}
+{"anchor": "Loots and equipment in my game is too unoriginal.", "positive": "Customization", "negatives": ["Zoning", "Dodge", "Voice Commands", "Contextual Prompts", "Combo System"]}
+
+{"anchor": "Players are hoarding items and loot in my RPG, how can I solve that?", "positive": "Resource Combination", "negatives": ["Minimap", "Quick Time Event", "Lore Collection", "Fluid Dynamics", "Fast Travel"]}
+{"anchor": "Loot in my open world feel useless.", "positive": "Resource Combination", "negatives": ["HUD", "Over-the-Shoulder", "Social Hubs", "Quick Time Event", "In-Game Currency"]}
+{"anchor": "How can I reward looting in my adventure game?", "positive": "Resource Combination", "negatives": ["Contextual Prompts", "Invisibility", "Weather Systems", "Voice Chat", "Radial Menus"]}
+
+{"anchor": "In my online game, players feels like they can't customize their playthrough enough.", "positive": "Base Building", "negatives": ["Pathfinding", "Quick Time Combat", "Motion Controls", "Radial Menus", "Trade System"]}
+{"anchor": "What could encourage exploration in my MMO?", "positive": "Base Building", "negatives": ["Regeneration", "Cinematic Camera", "Quick Time Combat", "Auction House", "Flocking"]}
+{"anchor": "How can I encourage creativity in my RPG?", "positive": "Base Building", "negatives": ["Voice Input", "Zoning", "Positional Audio", "Touch Input", "Fast Travel"]}
+
+{"anchor": "How can I design a building system?", "positive": "Blueprints", "negatives": ["Realistic Collision", "Double Jump", "Script Extensibility", "Motion Controls", "Zoning"]}
+{"anchor": "I'm making a survival game and I don't know how to implement building.", "positive": "Blueprints", "negatives": ["HUD", "Weather Systems", "Gravity Manipulation", "Motion Controls", "Quick Time Combat"]}
+{"anchor": "What mechanic could improve crafting and building?", "positive": "Blueprints", "negatives": ["Radial Menus", "Day-Night Cycle", "Loot Drops", "Resource Gathering", "Modular Construction"]}
+
+{"anchor": "How can I implement procedural generation to my simulation game?", "positive": "Zoning", "negatives": ["Trade System", "Supply and Demand", "Motion Controls", "Unlockables", "Lock-On"]}
+{"anchor": "Players are finding a hard time designing and placing buildings in my building sim.", "positive": "Zoning", "negatives": ["Fluid Dynamics", "Cover System", "Pathfinding", "Spectator Mode", "Branching Dialogue"]}
+{"anchor": "What could ease layout and planning in my simulation tycoon game?", "positive": "Zoning", "negatives": ["First-Person View", "Ambient Audio", "Quick Time Combat", "Co-op Play", "Cinematic Camera"]}
+
+{"anchor": "What other genre could I add to my multiplayer combat system?", "positive": "Defensive Fortification", "negatives": ["Friend Lists", "Counter Attack", "Upgrading", "Script Extensibility", "Adaptive AI"]}
+{"anchor": "How can I improve base building in my MMO?", "positive": "Defensive Fortification", "negatives": ["Combo Input", "Voice Input", "Resource Combination", "Non-linear Story", "Gravity Manipulation"]}
+{"anchor": "What system other than combat could I add to my game?", "positive": "Defensive Fortification", "negatives": ["Motion Controls", "Procedural Generation", "Ambient Audio", "Parry", "Supply and Demand"]}
+
+{"anchor": "I'm making a 3D action survival game and my building system feels too messy.", "positive": "Modular Construction", "negatives": ["Upgrade Resources", "Shield", "Dialogue Wheel", "Flocking", "Quick Time Event"]}
+{"anchor": "The buidling system of my 3D exploration game is too complex.", "positive": "Modular Construction", "negatives": ["Upgrade Resources", "Fluid Dynamics", "Friend Lists", "Lore Collection", "Over-the-Shoulder"]}
+{"anchor": "How can I make a simple and manageable building system for my 3D open world game?", "positive": "Modular Construction", "negatives": ["Non-linear Story", "Double Jump", "Bullet Time", "Block", "HUD"]}
+
+{"anchor": "How can I improve the movement in my action platformer?", "positive": "Dash", "negatives": ["Supply and Demand", "In-Game Chat", "Branching Dialogue", "Player Trading", "User-Generated Content"]}
+{"anchor": "What mechanic would make for an interesting 3D platformer?", "positive": "Dash", "negatives": ["Customization Tools", "HUD", "Microtransactions", "Social Hubs", "Fast Travel"]}
+{"anchor": "What would add depth to the levels of my game?", "positive": "Dash", "negatives": ["Upgrade Resources", "Cinematic Camera", "Asset Import", "Dialogue Wheel", "Customization Tools"]}
+
+{"anchor": "What would be an interesting mechanic for my puzzle game?", "positive": "Teleport", "negatives": ["Spectator Mode", "Cover Shooting", "Upgrade Resources", "Cinematic Camera", "Auction House"]}
+{"anchor": "What's a fun ability I could add to my shooter game?", "positive": "Teleport", "negatives": ["Friend Lists", "Trade System", "Customization", "Supply and Demand", "Touch Input"]}
+{"anchor": "How can I improve movement in my fighting game?", "positive": "Teleport", "negatives": ["Supply and Demand", "Procedural Generation", "Recipe System", "Realistic Collision", "User-Generated Content"]}
+
+{"anchor": "What fun movement mechanic could I add to my game?", "positive": "Wall Run", "negatives": ["HUD", "Branching Dialogue", "Flocking", "Realistic Collision", "Player Trading"]}
+{"anchor": "Players find traversal in my 3D platformer too boring?", "positive": "Wall Run", "negatives": ["User-Generated Content", "Lore Collection", "Non-linear Story", "Blueprints", "Random Events"]}
+{"anchor": "What mechanic can I add to encourage exploration and fun movement in my action game?", "positive": "Wall Run", "negatives": ["Script Extensibility", "HUD", "Microtransactions", "In-Game Currency", "Contextual Prompts"]}
+
+{"anchor": "What ability could improve my platformer?", "positive": "Double Jump", "negatives": ["Flocking", "Supply and Demand", "User-Generated Content", "Social Hubs", "Guild Systems"]}
+{"anchor": "How can I add depth to my level design?", "positive": "Double Jump", "negatives": ["Radial Menus", "Over-the-Shoulder", "Friend Lists", "Crafting Materials", "Microtransactions"]}
+{"anchor": "What mechanic could offer variety to my 3D platformer?", "positive": "Double Jump", "negatives": ["Customization Tools", "Touch Input", "Microtransactions", "HUD", "Auction House"]}
+
+{"anchor": "Players find my platformer too unforgiving, how can I solve that?", "positive": "Glide", "negatives": ["Dynamic Tooltips", "Open World Map", "Leveling Up", "Matchmaking", "Supply and Demand"]}
+{"anchor": "What mechanic could add depth to my level design?", "positive": "Glide", "negatives": ["Adaptive Soundtrack", "Touch Input", "Day-Night Cycle", "Player Trading", "HUD"]}
+{"anchor": "I'm making a 3D platformer but levels are too flat.", "positive": "Glide", "negatives": ["Modular Crafting", "Contextual Prompts", "Zoning", "In-Game Currency", "PvP"]}
+
+{"anchor": "I'm making an VR/XR game. What would make it intuitive to control?", "positive": "Gesture Recognition", "negatives": ["Parry", "Counter Attack", "Dynamic Music", "Open World Map", "Zoning"]}
+{"anchor": "What could be the main selling point of my experimental game?", "positive": "Gesture Recognition", "negatives": ["Discovery", "Day-Night Cycle", "Zoning", "Dynamic Tooltips", "Microtransactions"]}
+{"anchor": "How can I design my game around exercising and physical activity?", "positive": "Gesture Recognition", "negatives": ["Secret Areas", "Charge Attack", "Crafting Materials", "Dasn", "Open World Map"]}
+
+{"anchor": "I'm making a fighting game but there aren't enough buttons on the controller for all the moves.", "positive": "Combo Input", "negatives": ["Flocking", "Branching Dialogue", "Dynamic Ecosystem", "Resource Gathering", "Teleport"]}
+{"anchor": "How can I add more abilities and moves to my action game than there are buttons?", "positive": "Combo Input", "negatives": ["Quick Time Event", "Charge Attack", "Adaptive AI", "Block", "Double Jump"]}
+{"anchor": "I have too much moves and not enough buttons on the controller.", "positive": "Combo Input", "negatives": ["Trade System", "Perk System", "Free Camera", "In-Game Currency", "Leveling Up"]}
+
+{"anchor": "I am making a mobile game.", "positive": "Touch Input", "negatives": ["Interact", "HUD", "Pathfinding", "Open World Map", "Invisibility"]}
+{"anchor": "How do you design a mobile game?", "positive": "Touch Input", "negatives": ["Voice Chat", "Customization Tools", "Flocking", "Minimap", "Supply and Demand"]}
+{"anchor": "How can I design a phone game?", "positive": "Touch Input", "negatives": ["Quick Time Event", "Pathfinding", "Interact", "Inventory Management", "Double Jump"]}
+
+{"anchor": "What could be an original input method?", "positive": "Voice Input", "negatives": ["Positional Audio", "Double Jump", "Perk System", "Perception", "Interact"]}
+{"anchor": "Players are struggling with input in my strategy game.", "positive": "Voice Input", "negatives": ["Open World Map", "Workshop Integration", "Gravity Manipulation", "Voice Chat", "Co-op Play"]}
+{"anchor": "How can I make input more immersive in my game?", "positive": "Voice Input", "negatives": ["Skill Trees", "Co-op Play", "Asset Import", "Resource Gathering", "Cinematic Camera"]}
+
+{"anchor": "How can I make controls more immersive in my game?", "positive": "Motion Controls", "negatives": ["Procedural Generation", "Pathfinding", "Experience Points", "Workshop Integration", "Cover System"]}
+{"anchor": "What could be an original input method?", "positive": "Motion Controls", "negatives": ["Destructible Environments", "In-Game Currency", "Flocking", "Rage Mode", "Cover System"]}
+{"anchor": "Players can't aim precisely in my shooter game.", "positive": "Motion Controls", "negatives": ["Workshop Integration", "Unlockables", "Economy Balancing", "Social Hubs", "Customization Tools"]}
+
+{"anchor": "How can I easily design a ton of levels for my game?", "positive": "Procedural Generation", "negatives": ["Voice Chat", "PvP", "Guild Systems", "Co-op Play", "Rage Mode"]}
+{"anchor": "What could help me design an endless amount of levels?", "positive": "Procedural Generation", "negatives": ["Combo System", "Invisibility", "Microtransactions", "Supply and Demand", "Interact"]}
+{"anchor": "How can I make a lot of content for my game?", "positive": "Procedural Generation", "negatives": ["Invisibility", "Day-Night Cycle", "Block", "Upgrading", "Co-op Play"]}
+
+{"anchor": "I want to make my RPG less predictable.", "positive": "Random Events", "negatives": ["HUD", "In-Game Chat", "Co-op Play", "Day-Night Cycle", "Motion Controls"]}
+{"anchor": "I'm making a roguelike, how can I spice up gameplay?", "positive": "Random Events", "negatives": ["Over-the-Shoulder", "Spectator Mode", "Friend Lists", "Contextual Prompts", "Supply and Demand"]}
+{"anchor": "I'm making a text-based adventure game but playthroughs are identical.", "positive": "Random Events", "negatives": ["Day-Night Cycle", "In-Game Chat", "Rage Mode", "Double Jump", "Workshop Integration"]}
+
+{"anchor": "I'm making an RPG but players have no incentive for combat.", "positive": "Loot Drops", "negatives": ["Co-op Play", "Combo Input", "Inventory Management", "Critical Hits", "Auction House"]}
+{"anchor": "How can I reward combat in my game?", "positive": "Loot Drops", "negatives": ["Pathfinding", "Friend Lists", "In-Game Currency", "Customization Tools", "Base Building"]}
+{"anchor": "How can I make fights more interesting?", "positive": "Loot Drops", "negatives": ["Environmental Storytelling", "Script Extensibility", "Pathfinding", "HUD", "Branching Dialogue"]}
+
+{"anchor": "My RPG fights are too predictable.", "positive": "Dice Roll", "negatives": ["Player Trading", "Pathfinding", "Positional Audio", "Defensive Fortification", "Resource Gathering"]}
+{"anchor": "How can I make my turn-based game less predictable?", "positive": "Dice Roll", "negatives": ["Dash", "Auction House", "Modular Construction", "Cover Shooting", "Modular Crafting"]}
+{"anchor": "Players find my game too boring and static.", "positive": "Dice Roll", "negatives": ["In-Game Chat", "Lore Collection", "Spectator Mode", "Fast Travel", "HUD"]}
+
+{"anchor": "How can I make fights in multiplayer less boring and predictable?", "positive": "Critical Hits", "negatives": ["Environmental Storytelling", "Branching Dialogue", "Microtransactions", "Open World", "Perception"]}
+{"anchor": "My combat system is too simple, how can I add depth to it?", "positive": "Critical Hits", "negatives": ["Free Camera", "Touch Input", "Dynamic Music", "Fast Travel", "Supply and Demand"]}
+{"anchor": "How can I add randomness and fun to my combat system?", "positive": "Critical Hits", "negatives": ["Crafting Materials", "Voice Chat", "Adaptive Soundtrack", "Friend Lists", "In-Game Chat"]}
+
+{"anchor": "How do you design an economy for an MMO?", "positive": "Supply and Demand", "negatives": ["Perception", "Unlockables", "Script Extensibility", "Defensive Fortification", "Voice Input"]}
+{"anchor": "How can I balance the economy of my online game?", "positive": "Supply and Demand", "negatives": ["Dash", "PvP", "HUD", "Motion Controls", "Ambient Audio"]}
+{"anchor": "Players are exploiting shops in my multiplayer online game.", "positive": "Supply and Demand", "negatives": ["Block", "Skill Trees", "Blueprints", "Positional Audio", "Leveling Up"]}
+
+{"anchor": "How can I generate revenue from my game?", "positive": "Microtransactions", "negatives": ["Guild Systems", "Glide", "Upgrading", "Auction House", "Open World Map"]}
+{"anchor": "What could I add to make money from my game?", "positive": "Microtransactions", "negatives": ["Block", "Charge Attack", "Fast Travel", "Economy Balancing", "Invisibility"]}
+{"anchor": "How can I fund my game?", "positive": "Microtransactions", "negatives": ["Supply and Demand", "Economy Balancing", "Modular Crafting", "Perception", "Gravity Manipulation"]}
+
+{"anchor": "How do you design an economy for an MMO?", "positive": "Auction House", "negatives": ["Quick Time Event", "Over-the-Shoulder", "Resource Combination", "Gesture Recognition", "Customization Tools"]}
+{"anchor": "What mechanic could create interaction between players in my online game?", "positive": "Auction House", "negatives": ["Resource Combination", "Rage Mode", "Dodge", "Asset Import", "Procedural Generation"]}
+{"anchor": "Players want to sell items in my multiplayer online game.", "positive": "Auction House", "negatives": ["Inventory Management", "Shield", "Recipe System", "Resource Gathering", "Counter Attack"]}
+
+{"anchor": "Players want to sell items in my multiplayer online game.", "positive": "In-Game Currency", "negatives": ["Modular Construction", "Procedural Generation", "Spectator Mode", "Weather Systems", "Shield"]}
+{"anchor": "How do you design an economy for an MMO?", "positive": "In-Game Currency", "negatives": ["Customization Tools", "Rage Mode", "First-Person View", "Fluid Dynamics", "Free Camera"]}
+{"anchor": "What could I add to ease interaction and cooperation between players?", "positive": "In-Game Currency", "negatives": ["Dice Roll", "Combo System", "Supply and Demand", "Unlockables", "Leveling Up"]}
+
+{"anchor": "What could I add to encourage cooperation between players?", "positive": "Trade System", "negatives": ["Dash", "HUD", "Free Camera", "Radial Menus", "Combo System"]}
+{"anchor": "How can I foster collaboration in my multiplayer game?", "positive": "Trade System", "negatives": ["Cover Shooting", "Dynamic Music", "Block", "Wall Run", "Day-Night Cycle"]}
+{"anchor": "How can I design an interesting shop system in my MMO?", "positive": "Trade System", "negatives": ["Wall Run", "Defensive Fortification", "Touch Input", "Fast Travel", "Dice Roll"]}
+
+{"anchor": "What POV other than First Person could work for a shooter game?", "positive": "Over-the-Shoulder", "negatives": ["PvP", "Modular Construction", "Counter Attack", "Double Jump", "Voice Commands"]}
+{"anchor": "How can I make my 3D FPS game more cinematic?", "positive": "Over-the-Shoulder", "negatives": ["Upgrade Resources", "Workshop Integration", "Spectator Mode", "HUD", "Social Hubs"]}
+{"anchor": "Players are struggling to aim in my 3D shooter.", "positive": "Over-the-Shoulder", "negatives": ["User-Generated Content", "Resource Combination", "Auction House", "Recipe System", "Interact"]}
+
+{"anchor": "Players are missing a story point because their camera is in the wrong direction.", "positive": "Cinematic Camera", "negatives": ["User-Generated Content", "Guild Systems", "Dash", "Supply and Demand", "Economy Balancing"]}
+{"anchor": "I'm making a 3D adventure game. How can I make story points more impactful.", "positive": "Cinematic Camera", "negatives": ["Unlockables", "Matchmaking", "Friend Lists", "Voice Chat", "In-Game Chat"]}
+{"anchor": "I'm making a 3D action game but players are missing events because the camera isn't in the right direction.", "positive": "Cinematic Camera", "negatives": ["Combo System", "Motion Controls", "Friend Lists", "In-Game Currency", "Parry"]}
+
+{"anchor": "I'm making a 3D action game but players are struggling to aim.", "positive": "Lock-On", "negatives": ["Wall Run", "Spectator Mode", "Player Trading", "Block", "Auction House"]}
+{"anchor": "Players are having a hard time controling both the camera and the character in 3D.", "positive": "Lock-On", "negatives": ["PvP", "Lore Collection", "Experience Points", "Matchmaking", "Wall Run"]}
+{"anchor": "What mechanic could help players aim their camera in 3D during combat?", "positive": "Lock-On", "negatives": ["Invisibility", "Base Building", "Day-Night Cycle", "Double Jump", "Cover Shooting"]}
+
+{"anchor": "How can I make my 3D game more immersive?", "positive": "First-Person View", "negatives": ["Gravity Manipulation", "Skill Trees", "Dynamic Tooltips", "In-Game Chat", "HUD"]}
+{"anchor": "What could help with the realism of my 3D action game?", "positive": "First-Person View", "negatives": ["Workshop Integration", "Social Hubs", "Friend Lists", "Gravity Manipulation", "Customization Tools"]}
+{"anchor": "I want to make a 3D game. What would make it realistic and immersive?", "positive": "First-Person View", "negatives": ["Guild Systems", "Workshop Integration", "HUD", "Dash", "Spectator Mode"]}
+
+{"anchor": "How can I foster my 3D game and its community online?", "positive": "Free Camera", "negatives": ["Combo Input", "Inventory Management", "Branching Dialogue", "Voice Input", "Parry"]}
+{"anchor": "What could make my 3D game popular on social media?", "positive": "Free Camera", "negatives": ["Day-Night Cycle", "Environmental Hazards", "Discovery", "HUD", "Zoning"]}
+{"anchor": "Players aren't sharing my game on social networks.", "positive": "Free Camera", "negatives": ["Auction House", "Inventory Management", "Double Jump", "Dash", "First-Person View"]}
+
+{"anchor": "I can't balance the difficulty of my game.", "positive": "Regeneration", "negatives": ["Microtransactions", "Trade System", "Asset Import", "Motion Controls", "Supply and Demand"]}
+{"anchor": "What mechanic could make my game easier?", "positive": "Regeneration", "negatives": ["PvP", "Friend Lists", "Asset Import", "Motion Controls", "Day-Night Cycle"]}
+{"anchor": "Players find combat encounters too difficult.", "positive": "Regeneration", "negatives": ["Open World", "Friend Lists", "Asset Import", "Flocking", "Fast Travel"]}
+
+{"anchor": "What's an original mechanic I could add to my fighting game?", "positive": "Rage Mode", "negatives": ["Discovery", "Fast Travel", "Friend Lists", "Microtransactions", "Touch Input"]}
+{"anchor": "What could make my multiplayer fighting game more fun?", "positive": "Rage Mode", "negatives": ["Minimap", "Auction House", "HUD", "Flocking", "Realistic Collision"]}
+{"anchor": "Which mechanic can balance combat between skilled players and beginners?", "positive": "Rage Mode", "negatives": ["Modular Construction", "Cover Shooting", "Loot Drops", "Lore Collection", "HUD"]}
+
+{"anchor": "What's a fun ability I can add to my action platformer?", "positive": "Invisibility", "negatives": ["Guild Systems", "Fast Travel", "Day-Night Cycle", "Voice Chat", "Touch Input"]}
+{"anchor": "How can I make my action game more fun?", "positive": "Invisibility", "negatives": ["Friend Lists", "Voice Chat", "Matchmaking", "Microtransactions", "Zoning"]}
+{"anchor": "Players are struggling on some levels of the game.", "positive": "Invisibility", "negatives": ["Ambient Audio", "HUD", "Cover Shooting", "First-Person View", "Map Expansion"]}
+
+{"anchor": "What could make my shooter game more cinematic and impactful.", "positive": "Bullet Time", "negatives": ["User-Generated Content", "HUD", "PvP", "Dice Roll", "Voice Input"]}
+{"anchor": "How can I create a cinematic moment where the player faces overwhelming odds?", "positive": "Bullet Time", "negatives": ["Economy Balancing", "Touch Input", "Day-Night Cycle", "In-Game Chat", "Script Extensibility"]}
+{"anchor": "What mechanic or ability could work with my shooter game?", "positive": "Bullet Time", "negatives": ["Microtransactions", "Zoning", "HUD", "Friend Lists", "Supply and Demand"]}
+
+{"anchor": "Players are loosing too much health.", "positive": "Shield", "negatives": ["HUD", "First-Person View", "Interact", "Matchmaking", "Non-linear Story"]}
+{"anchor": "How can I make my game easier?", "positive": "Shield", "negatives": ["Supply and Demand", "Non-linear Story", "Modular Crafting", "Resource Combination", "Cinematic Camera"]}
+{"anchor": "What could be done to lower the difficulty of my game regarding health?", "positive": "Shield", "negatives": ["Zoning", "Open World", "Touch Input", "Gravity Manipulation", "Friend Lists"]}
+
+{"anchor": "How can I polish my game?", "positive": "Dynamic Music", "negatives": ["Day-Night Cycle", "Cover Shooting", "Resource Combination", "Dash", "Zoning"]}
+{"anchor": "Players don't feel immersed in the action of my game.", "positive": "Dynamic Music", "negatives": ["Double Jump", "Customization Tools", "Microtransactions", "In-Game Chat", "HUD"]}
+{"anchor": "What a nice way to add juice to my game?", "positive": "Dynamic Music", "negatives": ["Supply and Demand", "Defensive Fortification", "In-Game Currency", "First-Person View", "Script Extensibility"]}
+
+{"anchor": "I'm making a realistic open world but it's not immersive enough.", "positive": "Ambient Audio", "negatives": ["Gravity Manipulation", "HUD", "Workshop Integration", "Double Jump", "Free Camera"]}
+{"anchor": "How can I make the setting of my game more realistic?", "positive": "Ambient Audio", "negatives": ["Wall Run", "Zoning", "Flocking", "Environmental Hazards", "In-Game Currency"]}
+{"anchor": "What could help with the immersion and realism of my adventure game?", "positive": "Ambient Audio", "negatives": ["Fast Travel", "Spectator Mode", "Bullet Time", "Trade System", "HUD"]}
+
+{"anchor": "How can I take visually impaired people into account?", "positive": "Positional Audio", "negatives": ["Charge Attack", "Critical Hits", "Open World", "Glide", "Trade System"]}
+{"anchor": "How can I make my game clearer and more accessible?", "positive": "Positional Audio", "negatives": ["Block", "Trade System", "Workshop Integration", "Cover System", "Critical Hits"]}
+{"anchor": "Players are getting caught by surprise during combat encounters.", "positive": "Positional Audio", "negatives": ["Quick Time Combat", "Upgrade Resources", "Motion Controls", "Branching Dialogue", "Friend Lists"]}
+
+{"anchor": "How can I improve the replayability of my adventure game?", "positive": "Non-linear Story", "negatives": ["Regeneration", "Flocking", "HUD", "First-Person View", "Voice Commands"]}
+{"anchor": "What could make my story-based game more unpredictable?", "positive": "Non-linear Story", "negatives": ["Minimap", "Economy Balancing", "Voice Commands", "Social Hubs", "Trade System"]}
+{"anchor": "How can I expand the length and content of my game?", "positive": "Non-linear Story", "negatives": ["Glide", "Free Camera", "Teleport", "Rage Mode", "Lock-On"]}
+
+{"anchor": "I'm making an open world game and I feel like the game is too empty.", "positive": "Lore Collection", "negatives": ["PvP", "Dialogue Wheel", "Modular Crafting", "Ambient Audio", "Perception"]}
+{"anchor": "How can I encourage the exploration of the levels of my metroidvania?", "positive": "Lore Collection", "negatives": ["Asset Import", "Defensive Fortification", "Customization", "Voice Commands", "Cover Shooting"]}
+{"anchor": "What could I populate my game world with?", "positive": "Lore Collection", "negatives": ["Trade System", "First-Person View", "Voice Chat", "Critical Hits", "Cover Shooting"]}
+
+{"anchor": "What's a more subtle way to tell the story of my game, other than text or dialogue?", "positive": "Environmental Storytelling", "negatives": ["Charge Attack", "Voice Commands", "Free Camera", "Social Hubs", "Loot Drops"]}
+{"anchor": "Some players want story and lore in my game whereas others only care about gameplay and exploration.", "positive": "Environmental Storytelling", "negatives": ["Weather Systems", "Perk System", "Regeneration", "Cover Shooting", "Pathfinding"]}
+{"anchor": "How can I tell the story of my game without stopping the gameplay?", "positive": "Environmental Storytelling", "negatives": ["Touch Input", "Upgrading", "Voice Input", "Adaptive AI", "In-Game Currency"]}
+
+{"anchor": "Players are bored with and skip all the dialogue of the NPCs in my game.", "positive": "Branching Dialogue", "negatives": ["Inventory Management", "Radial Menus", "Fluid Dynamics", "In-Game Chat", "Matchmaking"]}
+{"anchor": "How can I make my story and dialogue less boring and more interactive?", "positive": "Branching Dialogue", "negatives": ["Block", "Interact", "Combo System", "Glide", "Flocking"]}
+{"anchor": "How can I improve storytelling in my game?", "positive": "Branching Dialogue", "negatives": ["Modular Construction", "Loot Drops", "Zoning", "Teleport", "Touch Input"]}
+
+{"anchor": "What is a more intuitive way of selecting options with a controller?", "positive": "Dialogue Wheel", "negatives": ["Asset Import", "Teleport", "Modular Construction", "Perk System", "Procedural Generation"]}
+{"anchor": "How can I port my game from PC to consoles?", "positive": "Dialogue Wheel", "negatives": ["Experience Points", "Random Events", "Defensive Fortification", "User-Generated Content", "Matchmaking"]}
+{"anchor": "Players are complaining about selecting menu options with a joystick.", "positive": "Dialogue Wheel", "negatives": ["Unlockables", "Spectator Mode", "Fluid Dynamics", "Combo Input", "Blueprints"]}
+
+{"anchor": "How can I add multiplayer to my game?", "positive": "PvP", "negatives": ["Non-linear Story", "Map Expansion", "Double Jump", "Pathfinding", "Blueprints"]}
+{"anchor": "I'm making an action game. Players want to play together.", "positive": "PvP", "negatives": ["Upgrade Resources", "Teleport", "Perk System", "Interact", "Invisibility"]}
+{"anchor": "What's a fun game mode I could add to my action game?", "positive": "PvP", "negatives": ["Dice Roll", "Ambient Audio", "Map Expansion", "Double Jump", "Loot Drops"]}
+
+{"anchor": "I'm making the online mode of my game. Players are complaining about communication in multiplayer.", "positive": "Voice Chat", "negatives": ["Script Extensibility", "Resource Combination", "Skill Trees", "Combo Input", "Bullet Time"]}
+{"anchor": "What could improve communication in my game?", "positive": "Voice Chat", "negatives": ["Shield", "Script Extensibility", "Gesture Recognition", "Combo System", "Loot Drops"]}
+{"anchor": "How can I allow players to communicate more easily than with text?", "positive": "Voice Chat", "negatives": ["Economy Balancing", "Experience Points", "Critical Hits", "Perk System", "Cover System"]}
+
+{"anchor": "How can I add multiplayer to my game?", "positive": "Co-op Play", "negatives": ["Realistic Collision", "Radial Menus", "Lore Collection", "Destructible Environments", "Regeneration"]}
+{"anchor": "I'm making an action game. Players want to play together.", "positive": "Co-op Play", "negatives": ["Over-the-Shoulder", "Flocking", "Inventory Management", "Voice Input", "Radial Menus"]}
+{"anchor": "What could make for a fun party game with friends?", "positive": "Co-op Play", "negatives": ["Fast Travel", "Economy Balancing", "Pathfinding", "Day-Night Cycle", "Flocking"]}
+
+{"anchor": "Players are complaining about having to wait until the next round after dying in multiplayer.", "positive": "Spectator Mode", "negatives": ["Interact", "Auction House", "Dodge", "HUD", "Dash"]}
+{"anchor": "How can I encourage the e-sport community around my online game?", "positive": "Spectator Mode", "negatives": ["Minimap", "Procedural Generation", "HUD", "Day-Night Cycle", "Voice Input"]}
+{"anchor": "My multiplayer mode is too boring after loosing.", "positive": "Spectator Mode", "negatives": ["Open World Map", "Interact", "Destructible Environments", "Over-the-Shoulder", "Wall Run"]}
+
+{"anchor": "I'm working on the online mode of my game and players end up against opponents who are too strong for them.", "positive": "Matchmaking", "negatives": ["Upgrade Resources", "Adaptive Soundtrack", "Block", "Destructible Environments", "Contextual Prompts"]}
+{"anchor": "The online mode of my game is dying, how can I improve it?", "positive": "Matchmaking", "negatives": ["Open World", "Dynamic Tooltips", "Weather Systems", "Bullet Time", "Flocking"]}
+{"anchor": "What could improve PvP balancing during online matches?", "positive": "Matchmaking", "negatives": ["Asset Import", "Motion Controls", "Interact", "Voice Input", "Flocking"]}
+
+{"anchor": "I'm making a 3D adventure game. Players are getting lost in my levels.", "positive": "Minimap", "negatives": ["Dodge", "Resource Combination", "Open World", "Regeneration", "Matchmaking"]}
+{"anchor": "How can I help with the sense of direction in my game world.", "positive": "Minimap", "negatives": ["Open World", "Dash", "Positional Audio", "Dice Roll", "Critical Hits"]}
+{"anchor": "What could encourage and improve exploration in my open world?", "positive": "Minimap", "negatives": ["Friend Lists", "Open World", "Motion Controls", "Parry", "Cover Shooting"]}
+
+{"anchor": "Players are confused about what button to press.", "positive": "Contextual Prompts", "negatives": ["Adaptive AI", "Base Building", "Dice Roll", "Cover Shooting", "Counter Attack"]}
+{"anchor": "Players are missing key items and NPCs because they don't realise they can interact with them.", "positive": "Contextual Prompts", "negatives": ["Wall Run", "Co-op Play", "Modular Construction", "Environmental Hazards", "Destructible Environments"]}
+{"anchor": "What could help players remember what to press?", "positive": "Contextual Prompts", "negatives": ["Script Extensibility", "First-Person View", "Cinematic Camera", "Inventory Management", "Ambient Audio"]}
+
+{"anchor": "I'm making the inventory system of my RPG. Players are too lazy to calculate if a piece of equipment is better than another.", "positive": "Dynamic Tooltips", "negatives": ["Player Trading", "PvP", "Workshop Integration", "User-Generated Content", "Flocking"]}
+{"anchor": "How can I improve the clarity and readability of my RPG's inventory system?", "positive": "Dynamic Tooltips", "negatives": ["Positional Audio", "Weather Systems", "Leveling Up", "Double Jump", "Combo System"]}
+{"anchor": "Gear stats in my open world are confusing players.", "positive": "Dynamic Tooltips", "negatives": ["Parry", "Open World", "Realistic Collision", "Cover Shooting", "Free Camera"]}
+
+{"anchor": "I'm working on the combat system of my game. How can I improve flow and controls during combat encounters.", "positive": "Radial Menus", "negatives": ["Asset Import", "Lore Collection", "Modular Construction", "In-Game Chat", "Resource Gathering"]}
+{"anchor": "Players can't use items during combat quick enough.", "positive": "Radial Menus", "negatives": ["Voice Chat", "Matchmaking", "Discovery", "Ragdoll Physics", "Trade System"]}
+{"anchor": "What's a less slow and clunky way of selecting items and options with a controller.", "positive": "Radial Menus", "negatives": ["Branching Dialogue", "In-Game Chat", "Regeneration", "Loot Drops", "Microtransactions"]}
+
+{"anchor": "Players are confused about some stats in my game.", "positive": "HUD", "negatives": ["Microtransactions", "Random Events", "Ragdoll Physics", "Combo System", "Day-Night Cycle"]}
+{"anchor": "What could improve clarity and readability in my game?", "positive": "HUD", "negatives": ["Voice Input", "Gravity Manipulation", "Procedural Generation", "Charge Attack", "Open World"]}
+{"anchor": "How can I indicate stuff to the player?", "positive": "HUD", "negatives": ["Script Extensibility", "Customization", "Resource Gathering", "Friend Lists", "Upgrading"]}
+
+{"anchor": "Players all end up creating the same character build in my RPG.", "positive": "Perk System", "negatives": ["Fast Travel", "Social Hubs", "Cover System", "PvP", "Bullet Time"]}
+{"anchor": "What could help players make diverse character builds.", "positive": "Perk System", "negatives": ["Gravity Manipulation", "Perception", "Motion Controls", "Microtransactions", "Double Jump"]}
+{"anchor": "How can I encourage different play styles in my game?", "positive": "Perk System", "negatives": ["Lore Collection", "Over-the-Shoulder", "Recipe System", "Fast Travel", "HUD"]}
+
+{"anchor": "How can I make my game less repetitive?", "positive": "Leveling Up", "negatives": ["Cover Shooting", "Double Jump", "Dynamic Tooltips", "Touch Input", "In-Game Chat"]}
+{"anchor": "My game is too repetitive and same-y.", "positive": "Leveling Up", "negatives": ["Lore Collection", "Over-the-Shoulder", "Inventory Management", "Voice Input", "Dash"]}
+{"anchor": "What can I add to improve the sense of progression and improvement of my game?", "positive": "Leveling Up", "negatives": ["Blueprints", "PvP", "Bullet Time", "Customization Tools", "Dash"]}
+
+{"anchor": "What can I add to improve the sense of progression of my game?", "positive": "Skill Trees", "negatives": ["Interact", "In-Game Chat", "Quick Time Combat", "User-Generated Content", "Weather Systems"]}
+{"anchor": "How can I foster different play styles and character builds?", "positive": "Skill Trees", "negatives": ["Perception", "Pathfinding", "Flocking", "Positional Audio", "Cover System"]}
+{"anchor": "Players can't understand my level up and ability system.", "positive": "Skill Trees", "negatives": ["Quick Time Event", "Voice Input", "Microtransactions", "Bullet Time", "Friend Lists"]}
+
+{"anchor": "What's a simple loot or reward I could add to my action game?", "positive": "Experience Points", "negatives": ["Voice Input", "Positional Audio", "Dice Roll", "Teleport", "Asset Import"]}
+{"anchor": "How can I easity implement a level up system?", "positive": "Experience Points", "negatives": ["Adaptive AI", "Open World", "Customization Tools", "Voice Chat", "Non-linear Story"]}
+{"anchor": "What collectible could I reward the player with?", "positive": "Experience Points", "negatives": ["Blueprints", "Open World", "Defensive Fortification", "Player Trading", "Guild Systems"]}
+
+{"anchor": "How can I expand the length and replayability of my arcade game?", "positive": "Unlockables", "negatives": ["Environmental Hazards", "Voice Chat", "Touch Input", "Double Jump", "First-Person View"]}
+{"anchor": "Players are getting bored of my game after a few playthroughs.", "positive": "Unlockables", "negatives": ["Cover System", "Charge Attack", "Environmental Hazards", "Voice Commands", "Double Jump"]}
+{"anchor": "What could keep players motivated and entice them to replay the game?", "positive": "Unlockables", "negatives": ["Motion Controls", "Zoning", "Flocking", "Dynamic Music", "Dash"]}

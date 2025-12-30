@@ -27,8 +27,7 @@ if __name__ == "__main__":
         print("[Info] Existing index valid, using it.\n")
 
     # Exemple de query
-    query = "this refers to video game design" + """I'm developping a sort of punch out clone where you're in first person view and can punch as well as dodge left or right, but i feel like the game isn't original enough"""
-
+    query = input("Describe the genre of your game and what problem you're looking to solve \n>>> ")
     try:
         results = retrieve(query, index_file=index_file, top_k=5)
     except Exception as e:

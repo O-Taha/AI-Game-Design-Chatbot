@@ -9,8 +9,8 @@ from pathlib import Path
 import torch
 import numpy as np
 
-# Modèle final (LoRA mergé)
-FINE_TUNED_MODEL = "TrainedModels/qbert-merged"
+# Modèle utilisé
+FINE_TUNED_MODEL = "TrainedModels/qbert-ranked"
 BASE_MODEL = "bert-base-uncased"
 
 # -----------------------------

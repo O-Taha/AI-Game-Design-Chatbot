@@ -8,9 +8,9 @@ LoRA training script for BERT (Masked LM) using PEFT.
 
 Usage example:
     python lora_train.py \
-        --corpus DAPT_Scraped_corpus/wiki_videogame_corpus.txt \
+        --corpus ../DAPT_Scraped_corpus/wiki_videogame_corpus.txt \
         --base_model bert-base-uncased \
-        --out_dir TrainedModels/qbert-lora \
+        --out_dir ../TrainedModels/qbert-lora \
         --epochs 2 \
         --batch_size 8
 

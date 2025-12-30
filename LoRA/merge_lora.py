@@ -15,8 +15,8 @@ from peft import PeftModel
 import torch
 
 BASE_MODEL = "bert-base-uncased"
-LORA_PATH = "TrainedModels/qbert-lora"
-MERGED_PATH = "TrainedModels/qbert-merged"
+LORA_PATH = "../TrainedModels/qbert-lora"
+MERGED_PATH = "../TrainedModels/qbert-merged"
 
 print("\n=== MERGE LORA → BERT ===\n")
 print("Base model:     ", BASE_MODEL)
@@ -40,7 +40,7 @@ print("[4/4] Saving merged model...")
 merged_model.save_pretrained(MERGED_PATH)
 
 print("Saving tokenizer...")
-tokenizer = AutoTokenizer.from_pretrained(LORA_PATH)
+tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
 tokenizer.save_pretrained(MERGED_PATH)
 
 print("\n=== DONE! ===")

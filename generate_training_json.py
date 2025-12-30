@@ -1,15 +1,16 @@
 import json, jsonlines, random, re
+from yaml_parsing import load_mechanics
 from pathlib import Path
 import requests
 import httplib2
-from bs4 import BeautifulSoup, SoupStrainer
+# from bs4 import BeautifulSoup, SoupStrainer
 import textdistance
 
 METACRITIC_URL = "https://www.metacritic.com"
 
 random.seed(42)
 
-INFILE = Path("all_mechanics.jsonl")
+INDIR = Path("./mechanics")
 OUTFILE = Path("training_triplets.jsonl")
 SAMPLES_PER_MECHANIC = 20  # ajustable
 NEGATIVES_COUNT = 5
@@ -74,41 +75,35 @@ def build_anchors(m):
 	"""
 		Turns a mechanic into a set of related believable user-queries
 	"""
-	short = m["short_description"]
+	short_desc = m["short_description"]
 	category = m["category"]
-	longd = m["long_description"]
-	solved = m["solved_problems"]
+	solved_pbm = m["solved_problems"]
 	examples = m["examples"]
 	
 	templates_subset = TEMPLATES.copy()
 	query_variants = []
 
-	# Always add a few direct problem rewrites from short/long/solved
-	if short != "" and random.getrandbits(1):
-		query_variants.append(f"I'm looking for a mechanic that does this : {short}")
-	if solved != "":
+	# Always add a few direct problem rewrites from short_desc/long/solved_pbm
+	if short_desc != "" and random.getrandbits(1):
+		query_variants.append(f"I'm looking for a mechanic that does this : {short_desc}")
+	if solved_pbm != "":
 		# try to extract the description part if the field contains a python dict string
 		# attempt to isolate 'description' value
-		pattern = r"'description':\s*'([^.]*)\."
-		desc = re.search(pattern, solved)
+		desc = solved_pbm[0]['description']
+		desc = desc.split(".")[0] + "." # Get the first sentence, eg : It's difficult to design spectacular attacks, like full-screen shockwaves, that are impossible to outrun.
 		if desc:
-			desc = desc.group(1) + '.'
 			#print(desc)
 			query_variants.append(f"{desc} What mechanic would solve this?")
 			query_variants.append(f"{desc} How to design around that?")
-		pattern = r"'title'\s*:\s*'([^']+)'"
-		problem_title = re.search(pattern, solved).group(1)
+		problem_title = solved_pbm[0]['title']
 		#print(problem_title)
 		if problem_title:
-			query_variants.append(f"How can I fix {problem_title}?")
+			query_variants.append(f"How can I fix {problem_title.lower()}?")
 	if examples != "":
-		examples = examples.split(";")
 		genres = []
 		for example in examples:
-			pattern = r"'title'\s*:\s*'([^']+)'"
-			game_title = re.search(pattern, example)
+			game_title = example['title'].replace('(series)', '')
 			if game_title:
-				game_title = game_title.group(1)
 				genre = get_game_genre(game_title)
 				if genre:  # Vérifier si un genre a été obtenu
 					genres.append(genre)
@@ -182,7 +177,7 @@ def calculate_similarity(game_title_in_url, initially_searched_game):
 	searched_game = initially_searched_game.replace("-", " ").replace(":", " ").lower()
 
 	similarity = textdistance.overlap.normalized_similarity(found_game, searched_game)
-	#print(f"Similarity between '{found_game}' and '{searched_game}': {similarity}")
+	print(f"Similarity between '{found_game}' and '{searched_game}': {similarity}")
 	return similarity
 
 
@@ -210,12 +205,7 @@ def get_game_genre(name):
 
 
 # Read mechanics
-mechanics = []
-with open(INFILE, "r", encoding="utf-8") as f:
-	reader = jsonlines.Reader(f)
-	for mechanic in reader:
-		if mechanic:
-			mechanics.append(mechanic)
+mechanics = load_mechanics(INDIR)
 
 all_mechanics_names = [m["name"] for m in mechanics]
 mechanics_per_category = {}

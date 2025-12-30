@@ -95,7 +95,8 @@ def build_faiss_index(mechanics_data, index_file='RAGIndex/mechdex.faiss'):
     """
 
     # Récupère la première embedding pour adapter la dimension au modèle
-    first_text = mechanics_data[0]['long_description'] + " " + mechanics_data[0]['solved_problems']
+    print(mechanics_data[0]['long_description'], str(mechanics_data[0]['solved_problems']).replace("\n", ""))
+    first_text = mechanics_data[0]['long_description'] + " " + str(mechanics_data[0]['solved_problems']).replace("\n", "")
     first_emb = text_embedding(first_text)
     dim = len(first_emb)
     print(f"Detected embedding dimension: {dim}")
@@ -110,7 +111,7 @@ def build_faiss_index(mechanics_data, index_file='RAGIndex/mechdex.faiss'):
     # Boucle sur toutes les mécaniques avec barre de progression
     for mech in tqdm(mechanics_data, desc="Generating embeddings"):
         # Texte combiné pour l'embedding : description + problèmes résolus
-        text = mech['long_description'] + " " + mech['solved_problems']
+        text = mech['long_description'] + " " + str(mech['solved_problems']).replace("\n", "")
         
         # Génération de l'embedding (vecteur 2048)
         emb = text_embedding(text)
