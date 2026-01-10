@@ -1,17 +1,18 @@
 # AI Game Design Chatbot
 ## Description
 This project is an AI helper chatbot for [Mechadex](https://mechadex.github.io/) \
-By running main.py, you're prompted to give a description of the *game design* promblem/mechanic you're encountering/looking for.
+By running main.py, you're prompted to give a description of the *game design* problem/mechanic you're encountering/looking for.
 
 **This tool is perfect for problem-solving or brainstorming**
+![Example Usage GIF](https://github.com/O-Taha/AI-Game-Design-Chatbot/blob/main/RunningAIChatbot.gif)
 
-The model used was trained on queries such as :
+The inital BERT model used was trained on queries such as :
 >- **anchor**: "How can I fix unclear progression paths?" -> "Skill Trees"
 >- **anchor**: "I'm working on the online mode of my game and players end up against opponents who are too strong for them." -> "Matchmaking"
 >- **anchor**: "The genre of my game is Action RPG. Traditional game dialogue is a one-way street where the player just listens to an NPC's exposition, which can be passive and boring. What mechanic would solve this?" -> "Branching Dialogue"
 
 ## Instructions
-Link to the [model used: qbert-ranked](https://drive.google.com/drive/folders/1WtwyxcCjWkQ42nAEmi7ZxbUx9F4M61J3?usp=sharing)
+Link to the [model I trained: qbert](https://drive.google.com/drive/folders/1WtwyxcCjWkQ42nAEmi7ZxbUx9F4M61J3?usp=sharing)
 1. Clone the [Mechadex repository](https://github.com/Mechadex/mechanics) for local access to mechanics
 2. Download and put the whole [```qbert-ranked/```](https://drive.google.com/drive/folders/1WtwyxcCjWkQ42nAEmi7ZxbUx9F4M61J3?usp=sharing)  directory inside ```TrainedModels/```, your local tree should look like this :
 ```
